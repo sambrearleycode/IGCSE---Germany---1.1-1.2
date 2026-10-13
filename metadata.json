@@ -1,0 +1,8 @@
+{
+  "name": "Weimar Republic Crisis Lab (1918–1920)",
+  "description": "Interactive Cambridge IGCSE History (0470/0977) Depth Study B analytical laboratory on the birth of the Weimar Republic and threats from Left and Right.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

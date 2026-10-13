@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-100 text-slate-800">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weimar Republic Crisis Lab (1918–1920) | Cambridge IGCSE History</title>
+  <meta name="description" content="Differentiated interactive laboratory for Cambridge IGCSE History (0470/0977) Depth Study B: Germany 1918–1945.">
+  <meta property="og:title" content="Weimar Republic Crisis Lab (1918–1920)">
+  <meta property="og:description" content="Accessible, differentiated history learning tool with simplified timelines, clickable deep dives, and dyslexia-friendly features.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons via unpkg -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Lexend (Dyslexia-optimized), Plus Jakarta Sans, Fraunces -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Lexend:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            dyslexic: ['Lexend', 'Comic Sans MS', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            leftist: {
+              50: '#FEF2F2',
+              100: '#FEE2E2',
+              200: '#FECACA',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#7F1D1D',
+            },
+            rightist: {
+              50: '#F0F9FF',
+              100: '#E0F2FE',
+              200: '#BAE6FD',
+              500: '#0284C7',
+              600: '#0284C7',
+              700: '#0369A1',
+              800: '#075985',
+              900: '#0C4A6E',
+            },
+            weimar: {
+              50: '#FFFBEB',
+              100: '#FEF3C7',
+              200: '#FDE68A',
+              500: '#F59E0B',
+              600: '#D97706',
+              700: '#B45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Base typography & readable defaults */
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    
+    /* Dyslexia mode overrides */
+    body.dyslexia-font {
+      font-family: 'Lexend', sans-serif !important;
+      letter-spacing: 0.03em;
+      word-spacing: 0.08em;
+      line-height: 1.75 !important;
+    }
+
+    body.text-lg-mode {
+      font-size: 1.125rem;
+    }
+    body.text-lg-mode p, body.text-lg-mode span, body.text-lg-mode button {
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+    body.dyslexia-font h1, 
+    body.dyslexia-font h2, 
+    body.dyslexia-font h3, 
+    body.dyslexia-font .font-editorial {
+      font-family: 'Lexend', sans-serif !important;
+      font-weight: 700;
+    }
+
+    /* Interactive glossary tooltip term */
+    .glossary-term {
+      border-bottom: 2px dotted #d97706;
+      cursor: help;
+      font-weight: 600;
+      color: #92400e;
+      background-color: #fef3c7;
+      padding: 0 3px;
+      border-radius: 3px;
+      transition: all 0.2s;
+    }
+    .glossary-term:hover {
+      background-color: #fde68a;
+      color: #78350f;
+    }
+
+    /* Scale pivot animation */
+    #scale-beam {
+      transform-origin: center center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #pendulum-needle {
+      transform-origin: 100px 95px;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Print styles */
+    @media print {
+      header, nav, #accessibility-bar, .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 flex flex-col selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- ============================================================== -->
+  <!-- TOP HEADER (LIGHT & ACADEMIC) -->
+  <!-- ============================================================== -->
+  <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Cambridge Syllabus Badge -->
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold shadow-sm">
+          <i data-lucide="landmark" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-lg font-bold tracking-tight text-slate-900 font-editorial">Weimar Crisis Lab</h1>
+            <span class="text-xs font-mono font-semibold text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded-full">IGCSE 0470 / 0977</span>
+          </div>
+          <p class="text-xs text-slate-500 hidden sm:block">Option B: Depth Study B (Germany, 1918–1945) · Differentiated Interactive Lab</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto py-1">
+        <button onclick="switchTab('crisis-engine')" id="tab-btn-crisis-engine" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-amber-900 bg-amber-50 border border-amber-200 shadow-xs flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="activity" class="w-4 h-4 text-amber-600"></i>
+          <span>1. Crisis Timeline</span>
+        </button>
+        <button onclick="switchTab('threat-comparator')" id="tab-btn-threat-comparator" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="git-compare" class="w-4 h-4 text-sky-600"></i>
+          <span>2. Threat Comparator</span>
+        </button>
+        <button onclick="switchTab('evidence-vault')" id="tab-btn-evidence-vault" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="scale" class="w-4 h-4 text-emerald-600"></i>
+          <span>3. Judicial Bias &amp; Myth</span>
+        </button>
+        <button onclick="switchTab('exam-lab')" id="tab-btn-exam-lab" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="award" class="w-4 h-4 text-rose-600"></i>
+          <span>4. Exam Lab &amp; Balance</span>
+        </button>
+      </nav>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button onclick="toggleGlossaryModal()" class="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors flex items-center gap-1.5" title="Open glossary of historical terms">
+          <i data-lucide="book-open" class="w-4 h-4 text-amber-600"></i>
+          <span class="hidden md:inline">Glossary</span>
+        </button>
+        <button onclick="toggleExamGuideModal()" class="px-3 py-1.5 text-xs font-semibold text-amber-900 bg-amber-100 hover:bg-amber-200 border border-amber-300 rounded-lg transition-colors flex items-center gap-1.5" title="View Cambridge mark scheme descriptors">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-700"></i>
+          <span class="hidden md:inline">Mark Scheme</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- ACCESSIBILITY & DIFFERENTIATION TOOLBAR (FOR MIXED ABILITY & DYSLEXIA) -->
+  <!-- ============================================================== -->
+  <div id="accessibility-bar" class="bg-amber-50/80 border-b border-amber-200/80 px-4 py-2 text-xs text-slate-700 transition-all">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Learning Mode Toggle (Core vs Higher) -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="font-bold text-amber-950 flex items-center gap-1">
+          <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-amber-700"></i>
+          <span>Differentiation Level:</span>
+        </span>
+        <div class="inline-flex rounded-lg bg-white border border-amber-300 p-0.5 shadow-2xs">
+          <button onclick="setLearningMode('core')" id="mode-btn-core" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-amber-600 text-white shadow-xs">
+            Core / Foundation (Plain English)
+          </button>
+          <button onclick="setLearningMode('higher')" id="mode-btn-higher" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-600 hover:text-slate-900">
+            Higher / Senior Examiner (AO1 + AO2)
+          </button>
+        </div>
+      </div>
+
+      <!-- Dyslexia & Readability Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Dyslexia font toggle -->
+        <button onclick="toggleDyslexiaFont()" id="btn-dyslexia" class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-300 hover:bg-slate-50 font-medium text-slate-700 transition-colors shadow-2xs" title="Switch to Lexend dyslexia-friendly typeface with enhanced letter spacing">
+          <i data-lucide="type" class="w-3.5 h-3.5 text-amber-700"></i>
+          <span id="dyslexia-btn-label">Dyslexia Font: Off</span>
+        </button>
+
+        <!-- Text Size Toggle -->
+        <div class="inline-flex rounded-md bg-white border border-slate-300 p-0.5 shadow-2xs">
+          <button onclick="setTextSize('normal')" id="btn-size-normal" class="px-2 py-0.5 font-bold text-slate-900 bg-slate-200 rounded text-xs" title="Standard text size">A</button>
+          <button onclick="setTextSize('large')" id="btn-size-large" class="px-2 py-0.5 font-bold text-slate-600 hover:text-slate-900 rounded text-sm" title="Larger text size">A+</button>
+        </div>
+
+        <!-- Read Aloud active status button -->
+        <button onclick="toggleAudioReading()" id="btn-audio-narrator" class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-300 hover:bg-slate-50 font-medium text-slate-700 transition-colors shadow-2xs" title="Listen to current section with voice read-aloud">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span id="audio-btn-label">Read Aloud</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MAIN APPLICATION STAGE -->
+  <!-- ============================================================== -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
+
+    <!-- ============================================================== -->
+    <!-- MODULE 1: THE CRISIS ENGINE & TIMELINE (1918–1920) -->
+    <!-- ============================================================== -->
+    <div id="module-crisis-engine" class="module-section space-y-6">
+      
+      <!-- Module Intro Box with Light Clean Aesthetics -->
+      <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-semibold text-amber-700 uppercase tracking-wider mb-1">
+              <span>Interactive Chronology &amp; Power Dynamics</span>
+              <span>·</span>
+              <span>1918 to 1922</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">The Crisis Engine &amp; Republican Pendulum</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              Explore how Friedrich Ebert's new republic faced immediate collapse. Use the timeline to see each threat, and click on details when you are ready to explore deeper historical causes.
+            </p>
+          </div>
+
+          <!-- Timeline View Mode Toggle: Scrubber vs. Simplified Cards -->
+          <div class="flex items-center gap-2 bg-slate-100 p-1 rounded-xl border border-slate-200 shrink-0">
+            <button onclick="setTimelineView('scrubber')" id="btn-view-scrubber" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-slate-900 shadow-xs transition-all">
+              Timeline Scrubber
+            </button>
+            <button onclick="setTimelineView('simplified')" id="btn-view-simplified" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 transition-all">
+              Simplified Story Cards
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIMELINE VIEW A: SCRUBBER INTERFACE -->
+      <div id="timeline-scrubber-view" class="space-y-6">
+        
+        <!-- Timeline Navigation Strip -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <i data-lucide="calendar" class="w-5 h-5 text-amber-600"></i>
+              <span class="text-sm font-bold text-slate-800">5 Pivotal Milestones (1918–1922)</span>
+              <span class="text-xs text-slate-500">(Click any card to examine)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="stepTimeline(-1)" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" title="Previous event">
+                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+              </button>
+              <span id="timeline-step-indicator" class="text-xs font-mono font-bold text-slate-600 px-2">1 / 5</span>
+              <button onclick="stepTimeline(1)" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" title="Next event">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Node Cards Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3" id="timeline-nodes-container">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- Two-Column Interactive Stage -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- Left Column: The Main Event Story & Clickable Deep Dives (8 Cols) -->
+          <div class="lg:col-span-8 space-y-5">
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm relative overflow-hidden">
+              
+              <!-- Event Header Strip -->
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div>
+                  <div class="flex items-center gap-2 mb-2 flex-wrap">
+                    <span id="event-badge-vector" class="px-2.5 py-1 rounded-full text-xs font-mono uppercase font-bold bg-red-100 text-red-800 border border-red-300">
+                      Left-Wing Revolutionary Threat
+                    </span>
+                    <span id="event-date" class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">October 1918</span>
+                  </div>
+                  <h3 id="event-title" class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">Kiel Mutiny &amp; Kaiser's Abdication</h3>
+                </div>
+
+                <!-- Threat Icon -->
+                <div id="event-threat-icon" class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0 text-amber-700 shadow-2xs">
+                  <i data-lucide="anchor" class="w-7 h-7"></i>
+                </div>
+              </div>
+
+              <!-- Simplified "In a Nutshell" Box (Accessible for Dyslexia & Foundation Tier) -->
+              <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-4 sm:p-5 mb-5">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-mono uppercase tracking-wider font-bold text-amber-800 flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-amber-600"></i>
+                    <span>In a Nutshell (Core Summary)</span>
+                  </span>
+                  <button onclick="readAloudCurrentSummary()" class="text-xs font-semibold text-amber-800 hover:text-amber-950 flex items-center gap-1 bg-amber-100 px-2 py-0.5 rounded">
+                    <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                    <span>Listen</span>
+                  </button>
+                </div>
+                <p id="event-nutshell" class="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
+                  German sailors refused an order to fight a suicidal battle against the British Navy. Their mutiny spread into a revolution across Germany. The Kaiser ran away to Holland, and the German Republic was born out of defeat.
+                </p>
+              </div>
+
+              <!-- Key Figures / Named Actors (Large, clear badges with tooltips) -->
+              <div class="mb-5">
+                <h4 class="text-xs font-mono uppercase tracking-wider font-bold text-slate-500 mb-2">
+                  Key People Involved (Click for quick profile):
+                </h4>
+                <div id="event-actors" class="flex flex-wrap gap-2 text-xs sm:text-sm">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+
+              <!-- CLICK-TO-REVEAL ACCORDIONS (Progressive Disclosure) -->
+              <!-- Replaces small cluttered text with clear clickable buttons -->
+              <div class="space-y-3 pt-2 border-t border-slate-200">
+                <h4 class="text-xs font-mono uppercase tracking-wider font-bold text-slate-500">
+                  Click to Explore Detailed Analysis:
+                </h4>
+
+                <!-- Accordion 1: The Faustian Compromise -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                  <button onclick="toggleAccordion('acc-compromise')" class="w-full p-4 text-left font-bold text-slate-800 flex items-center justify-between hover:bg-slate-100 transition-colors">
+                    <span class="flex items-center gap-2 text-sm sm:text-base">
+                      <i data-lucide="handshake" class="w-4 h-4 text-amber-600"></i>
+                      <span>The Government's Compromise (The "Faustian Bargain")</span>
+                    </span>
+                    <i id="acc-icon-compromise" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                  </button>
+                  <div id="acc-content-compromise" class="hidden p-4 pt-0 text-sm sm:text-base text-slate-700 border-t border-slate-200 bg-white leading-relaxed">
+                    <p id="event-compromise">
+                      Social Democratic leaders rushed to proclaim the republic to preempt Karl Liebknecht’s communist declaration, taking ownership of the military defeat and food shortages.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Accordion 2: Long-Term Democratic Scar -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                  <button onclick="toggleAccordion('acc-legacy')" class="w-full p-4 text-left font-bold text-slate-800 flex items-center justify-between hover:bg-slate-100 transition-colors">
+                    <span class="flex items-center gap-2 text-sm sm:text-base">
+                      <i data-lucide="heart-crack" class="w-4 h-4 text-rose-600"></i>
+                      <span>Long-Term Democratic Scar on Weimar</span>
+                    </span>
+                    <i id="acc-icon-legacy" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                  </button>
+                  <div id="acc-content-legacy" class="hidden p-4 pt-0 text-sm sm:text-base text-slate-700 border-t border-slate-200 bg-white leading-relaxed">
+                    <p id="event-legacy">
+                      The republic was born out of military collapse rather than a triumphant democratic consensus, leaving millions of conservative Germans feeling cheated of monarchy.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Accordion 3: Cambridge Examiner Tip (AO2) -->
+                <div class="border border-indigo-200 rounded-xl overflow-hidden bg-indigo-50/50">
+                  <button onclick="toggleAccordion('acc-examiner')" class="w-full p-4 text-left font-bold text-indigo-950 flex items-center justify-between hover:bg-indigo-100/50 transition-colors">
+                    <span class="flex items-center gap-2 text-sm sm:text-base">
+                      <i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-700"></i>
+                      <span>Senior Examiner Tip (How to score marks on this)</span>
+                    </span>
+                    <i id="acc-icon-examiner" data-lucide="chevron-down" class="w-5 h-5 text-indigo-700 transition-transform"></i>
+                  </button>
+                  <div id="acc-content-examiner" class="hidden p-4 pt-0 text-sm sm:text-base text-indigo-950 border-t border-indigo-200 bg-white leading-relaxed">
+                    <p id="event-examiner-tip">
+                      Avoid writing that the Kaiser abdicated voluntarily; stress that military high command informed him the army would no longer march under his command.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Pendulum Gauge & Comprehension Check (4 Cols) -->
+          <div class="lg:col-span-4 space-y-5">
+            
+            <!-- Dial Meter Card -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm text-center">
+              <span class="text-xs font-mono font-bold uppercase text-slate-500 tracking-wider">Ideological Threat Balance</span>
+              <h4 class="text-lg font-bold text-slate-900 font-editorial mb-3">The Republican Pendulum</h4>
+
+              <!-- Visual SVG Needle Dial (Clear light-mode contrast) -->
+              <div class="relative max-w-[240px] mx-auto py-2">
+                <svg viewBox="0 0 200 120" class="w-full h-auto overflow-visible">
+                  <!-- Arc Background -->
+                  <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round"/>
+                  
+                  <!-- Left Threat (Crimson) -->
+                  <path d="M 20 100 A 80 80 0 0 1 70 38" fill="none" stroke="#ef4444" stroke-width="18" opacity="0.85"/>
+                  <!-- Center (Amber Gold) -->
+                  <path d="M 70 38 A 80 80 0 0 1 130 38" fill="none" stroke="#f59e0b" stroke-width="18" opacity="0.85"/>
+                  <!-- Right Threat (Sky Blue) -->
+                  <path d="M 130 38 A 80 80 0 0 1 180 100" fill="none" stroke="#0284c7" stroke-width="18" opacity="0.85"/>
+
+                  <!-- Labels -->
+                  <text x="25" y="118" fill="#dc2626" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">FAR-LEFT</text>
+                  <text x="100" y="24" fill="#b45309" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">REPUBLIC</text>
+                  <text x="175" y="118" fill="#0369a1" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">FAR-RIGHT</text>
+
+                  <!-- Center Pin -->
+                  <circle cx="100" cy="95" r="7" fill="#0f172a"/>
+                  <circle cx="100" cy="95" r="3" fill="#ffffff"/>
+
+                  <!-- Dynamic Needle -->
+                  <g id="pendulum-needle" style="transform: rotate(-45deg);">
+                    <line x1="100" y1="95" x2="100" y2="30" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round" />
+                    <polygon points="96,35 104,35 100,22" fill="#0f172a" />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Current Reading Box -->
+              <div id="pendulum-status-box" class="mt-2 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm">
+                <div class="text-slate-500 font-mono font-medium">Main Threat Direction:</div>
+                <div id="pendulum-label" class="font-bold text-red-700 text-base mt-0.5">Left-Wing Revolutionary Surge</div>
+                <p id="pendulum-subtext" class="text-xs text-slate-600 mt-1">
+                  Workers' and soldiers' councils threatening to replace parliamentary republic with Soviets.
+                </p>
+              </div>
+
+              <!-- Indicators: Working-class loyalty & Army independence -->
+              <div class="mt-4 space-y-2.5 text-left text-xs sm:text-sm">
+                <div>
+                  <div class="flex justify-between text-slate-700 font-semibold mb-1">
+                    <span>Working-Class Faith in SPD:</span>
+                    <span id="bar-spd-val" class="font-mono text-amber-700 font-bold">80%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                    <div id="bar-spd" class="bg-amber-500 h-full rounded-full transition-all duration-500" style="width: 80%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-700 font-semibold mb-1">
+                    <span>Army Autonomy (Independence):</span>
+                    <span id="bar-army-val" class="font-mono text-sky-700 font-bold">60%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                    <div id="bar-army" class="bg-sky-500 h-full rounded-full transition-all duration-500" style="width: 60%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Retrieval Checkpoint (Card with Clear Buttons) -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono uppercase font-bold text-amber-800">Quick Check (AO1 Recall)</span>
+                <span id="quiz-status" class="text-xs font-mono font-bold text-slate-500">Unanswered</span>
+              </div>
+              <p id="quiz-question" class="text-sm font-bold text-slate-800 mb-3 leading-snug">
+                What was the principal trade made in the Ebert-Groener Pact?
+              </p>
+              <div id="quiz-options" class="space-y-2">
+                <!-- Dynamically populated -->
+              </div>
+              <div id="quiz-feedback" class="mt-3 text-xs sm:text-sm hidden p-3 rounded-xl"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TIMELINE VIEW B: SIMPLIFIED STORYBOARD CARDS (FOR SCAFFOLDING & FOUNDATION STUDENTS) -->
+      <div id="timeline-simplified-view" class="hidden space-y-4">
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-4">
+          <div class="flex items-center gap-2 text-amber-900 font-bold text-base mb-1">
+            <i data-lucide="book-open-check" class="w-5 h-5 text-amber-700"></i>
+            <span>The 5-Step Story of Weimar's Birth (Simplified Overview)</span>
+          </div>
+          <p class="text-sm text-slate-700">
+            Read these five cards in order to understand how Germany went from an empire in the First World War to a divided, struggling republic.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="simplified-cards-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 2: THREAT COMPARATOR (SPARTACIST vs. KAPP PUTSCH) -->
+    <!-- ============================================================== -->
+    <div id="module-threat-comparator" class="module-section hidden space-y-6">
+      
+      <!-- Module Intro -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-sky-800 uppercase tracking-wider mb-1">
+              <span>Classic Cambridge 10-Mark Question Focus</span>
+              <span>·</span>
+              <span>AO2 Comparative Causation</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">Threat Comparator: Left vs. Right (1919–1920)</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              Cambridge examiners love asking: <strong class="text-slate-900">"Why was the Kapp Putsch a greater danger to the Weimar government than the Spartacist Uprising?"</strong> Compare them side-by-side.
+            </p>
+          </div>
+
+          <!-- Quick Comparison Filter -->
+          <div class="flex items-center gap-1.5 bg-slate-100 p-1.5 rounded-xl border border-slate-200 shrink-0">
+            <button onclick="setCompareFocus('all')" id="btn-focus-all" class="compare-filter-btn px-3 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-900 shadow-xs">
+              All Factors
+            </button>
+            <button onclick="setCompareFocus('military')" id="btn-focus-military" class="compare-filter-btn px-3 py-1.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900">
+              Army Response
+            </button>
+            <button onclick="setCompareFocus('outcome')" id="btn-focus-outcome" class="compare-filter-btn px-3 py-1.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900">
+              Consequence
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side-by-Side Comparison Columns -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- LEFT COLUMN: SPARTACIST UPRISING (CRIMSON) -->
+        <div class="bg-white border-2 border-red-200 rounded-2xl p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-red-100 pb-3">
+            <div>
+              <span class="text-xs font-mono uppercase font-bold text-red-700 tracking-wider">January 1919 · Far-Left Revolt</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-editorial">Spartacist Uprising</h3>
+              <p class="text-xs sm:text-sm text-slate-600">Led by Karl Liebknecht &amp; Rosa Luxemburg</p>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-red-100 border border-red-300 text-red-800 text-xs font-mono font-bold">
+              Communist (KPD)
+            </span>
+          </div>
+
+          <!-- Core Fact in a Nutshell -->
+          <div class="bg-red-50 p-4 rounded-xl border border-red-200 text-sm text-red-950 font-medium">
+            <strong>In Short:</strong> Left-wing workers tried to launch a Russian-style communist revolution in Berlin. They had numbers (100,000 strikers), but lacked military weapons and organization.
+          </div>
+
+          <!-- Comparison Points -->
+          <div class="space-y-3 text-sm">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-red-700 text-xs uppercase font-mono mb-1">What did they want?</div>
+              <p class="text-slate-700">Get rid of Ebert’s capitalist government; set up a republic run by workers’ and soldiers’ councils (<span class="glossary-term" onclick="lookupGlossary('Räte')">Räte</span>).</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 comp-node-military">
+              <div class="font-bold text-red-700 text-xs uppercase font-mono mb-1">How did the military react?</div>
+              <p class="text-slate-700">The government sent the regular army and armed volunteer ex-soldiers called the <span class="glossary-term" onclick="lookupGlossary('Freikorps')">Freikorps</span>. They crushed the communists with ruthless brutality.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 comp-node-outcome">
+              <div class="font-bold text-red-700 text-xs uppercase font-mono mb-1">The Human Cost &amp; Punishment:</div>
+              <p class="text-slate-700">Over 170 workers killed. Liebknecht and Luxemburg were murdered without a trial. Luxemburg’s body was dumped into a canal.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-red-50/60 border border-red-200">
+              <div class="font-bold text-amber-900 text-xs uppercase font-mono mb-1">Long-Term Impact on Democracy:</div>
+              <p class="text-slate-800">It broke the political Left in two. The Communists could never forgive the SPD for using right-wing militias to kill their leaders. They refused to join together even when Hitler rose to power in 1933.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: KAPP PUTSCH (NAVY / SKY BLUE) -->
+        <div class="bg-white border-2 border-sky-200 rounded-2xl p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-sky-100 pb-3">
+            <div>
+              <span class="text-xs font-mono uppercase font-bold text-sky-800 tracking-wider">March 1920 · Far-Right Revolt</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-editorial">Kapp Putsch</h3>
+              <p class="text-xs sm:text-sm text-slate-600">Led by Wolfgang Kapp &amp; General von Lüttwitz</p>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-mono font-bold">
+              Nationalist / Military
+            </span>
+          </div>
+
+          <!-- Core Fact in a Nutshell -->
+          <div class="bg-sky-50 p-4 rounded-xl border border-sky-200 text-sm text-sky-950 font-medium">
+            <strong>In Short:</strong> Right-wing soldiers marched into Berlin to overthrow the republic. The regular German army refused to stop them. The government was saved only by a massive peaceful workers' strike.
+          </div>
+
+          <!-- Comparison Points -->
+          <div class="space-y-3 text-sm">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sky-700 text-xs uppercase font-mono mb-1">What did they want?</div>
+              <p class="text-slate-700">Stop the government from reducing the army to 100,000 men (required by the Treaty of Versailles), restore imperial power, and cancel democracy.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 comp-node-military">
+              <div class="font-bold text-sky-700 text-xs uppercase font-mono mb-1">How did the military react?</div>
+              <p class="text-slate-700">Army Commander General von Seeckt refused Ebert’s orders: <em class="font-serif font-bold text-slate-900">"Reichswehr does not fire upon Reichswehr."</em> The army deserted its own government.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 comp-node-outcome">
+              <div class="font-bold text-sky-700 text-xs uppercase font-mono mb-1">The Human Cost &amp; Punishment:</div>
+              <p class="text-slate-700">Kapp fled to Sweden after five days. The leaders received virtually no punishment from sympathetic conservative judges.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sky-50/60 border border-sky-200">
+              <div class="font-bold text-amber-900 text-xs uppercase font-mono mb-1">Long-Term Impact on Democracy:</div>
+              <p class="text-slate-800">It proved that the army was a "state within a state." The Weimar government could not count on its own generals to defend it against right-wing traitors.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- THE ARMY DOUBLE-STANDARD SIMULATOR -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+          <div>
+            <span class="text-xs font-mono uppercase font-bold text-amber-800">Interactive Simulation</span>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 font-editorial">The Reichswehr Loyalty Double-Standard</h3>
+            <p class="text-sm text-slate-600">
+              Click either button to see how the army responded when ordered to protect the government:
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="simulateArmyResponse('left')" id="sim-btn-left" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-red-100 hover:bg-red-200 border border-red-300 text-red-800 transition-colors">
+              Order: Crush Spartacists (Left)
+            </button>
+            <button onclick="simulateArmyResponse('right')" id="sim-btn-right" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-sky-100 hover:bg-sky-200 border border-sky-300 text-sky-800 transition-colors">
+              Order: Stop Kapp Putsch (Right)
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulation Result Card -->
+        <div id="sim-output-box" class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col md:flex-row items-center gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-white border border-slate-300 flex items-center justify-center shrink-0 text-red-600 shadow-2xs">
+            <i id="sim-icon" data-lucide="flame" class="w-7 h-7"></i>
+          </div>
+          <div class="space-y-1.5 flex-1 text-center md:text-left">
+            <div class="flex flex-wrap items-center gap-2 justify-center md:justify-start">
+              <span id="sim-commander" class="text-xs font-mono font-bold text-amber-800 uppercase">General Wilhelm Groener &amp; Gustav Noske</span>
+              <span id="sim-status" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-red-100 text-red-800 border border-red-300">Ruthless Military Suppression</span>
+            </div>
+            <div id="sim-headline" class="text-base sm:text-lg font-bold text-slate-900 font-editorial">"Someone must be the bloodhound; I won't shrink from the responsibility."</div>
+            <p id="sim-explanation" class="text-sm text-slate-700 leading-relaxed">
+              The high command viewed the communists as national traitors and enthusiastically deployed artillery, Freikorps units, and armored cars, carrying out summary executions without trial.
+            </p>
+          </div>
+        </div>
+
+        <!-- Scaffolded Exam Sentence Generator -->
+        <div class="mt-5 pt-4 border-t border-slate-200">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono uppercase font-bold text-indigo-900 flex items-center gap-1.5">
+              <i data-lucide="pen-tool" class="w-4 h-4 text-indigo-600"></i>
+              <span>Exam Sentence Scaffold (How to write this in an exam)</span>
+            </span>
+            <button onclick="generateExamStem()" class="text-xs text-amber-700 hover:text-amber-900 font-bold underline">
+              Show Another Model Sentence
+            </button>
+          </div>
+          <div id="exam-stem-display" class="bg-indigo-50/70 border border-indigo-200 p-4 rounded-xl text-sm text-indigo-950 leading-relaxed font-medium">
+            "The Kapp Putsch posed a vastly more dangerous threat than the Spartacist Uprising because whereas the Spartacists were easily crushed by the state's military proxies, the Kapp Putsch revealed that the Reichswehr was an autonomous 'state within a state' that refused to protect its elected government."
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 3: JUDICIAL BIAS & DOLCHSTOẞ EVIDENCE VAULT -->
+    <!-- ============================================================== -->
+    <div id="module-evidence-vault" class="module-section hidden space-y-6">
+      
+      <!-- Module Intro -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-800 uppercase tracking-wider mb-1">
+              <span>Primary Evidence Laboratory &amp; Data Analysis</span>
+              <span>·</span>
+              <span>AO1 &amp; AO2 Source Analysis</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">Judicial Bias &amp; The Dolchstoßlegende</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              Examine the historical evidence: Emil Julius Gumbel’s statistics on 376 political murders, and the dangerous myth that Germany was "stabbed in the back."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="toggleDataView('murders')" id="btn-view-murders" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-900 shadow-xs">
+              Judicial Murder Stats (Gumbel)
+            </button>
+            <button onclick="toggleDataView('dolchstoss')" id="btn-view-dolchstoss" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700">
+              Anatomy of Dolchstoß
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3A: JUDICIAL BIAS STATISTICAL LAB -->
+      <div id="container-judiciary-stats" class="space-y-6">
+        
+        <!-- Big Number Cards (High-Contrast & Clear) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center shadow-xs">
+            <div class="text-xs font-mono font-bold text-slate-500 uppercase mb-1">Total Political Murders (1919–1922)</div>
+            <div class="text-4xl font-bold font-mono text-slate-900">376</div>
+            <p class="text-xs text-slate-500 mt-1">Investigated by mathematician E.J. Gumbel</p>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 rounded-2xl p-5 text-center shadow-xs">
+            <div class="text-xs font-mono font-bold text-sky-800 uppercase mb-1">Right-Wing Murders Committed</div>
+            <div class="text-4xl font-bold font-mono text-sky-900">354 <span class="text-base font-normal text-sky-700">(94%)</span></div>
+            <p class="text-xs text-sky-800 mt-1">By nationalist groups (e.g. Organisation Consul)</p>
+          </div>
+
+          <div class="bg-red-50 border border-red-200 rounded-2xl p-5 text-center shadow-xs">
+            <div class="text-xs font-mono font-bold text-red-800 uppercase mb-1">Left-Wing Murders Committed</div>
+            <div class="text-4xl font-bold font-mono text-red-900">22 <span class="text-base font-normal text-red-700">(6%)</span></div>
+            <p class="text-xs text-red-800 mt-1">By communist &amp; worker rebels</p>
+          </div>
+
+        </div>
+
+        <!-- Comparative Sentence Breakdown (Light Cards) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 font-editorial">The Courts: Two Standards of Justice</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Judges from the Kaiser's era favored right-wing nationalists and punished left-wingers ruthlessly.</p>
+            </div>
+            <button onclick="readAloudJudicialComparison()" class="text-xs font-semibold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg flex items-center gap-1 hover:bg-slate-200">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              <span>Listen</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- Right-Wing Murderers Box -->
+            <div class="bg-sky-50/70 p-5 rounded-2xl border border-sky-200 space-y-4">
+              <div class="flex items-center justify-between border-b border-sky-200 pb-2">
+                <span class="font-bold text-sky-950 text-base">354 Right-Wing Murders</span>
+                <span class="text-xs font-mono font-bold text-sky-800">e.g. Rathenau, Erzberger</span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 text-center">
+                <div class="bg-white p-3 rounded-xl border border-sky-200">
+                  <div class="text-3xl font-bold font-mono text-slate-900">0</div>
+                  <div class="text-[11px] font-bold text-slate-600 uppercase font-mono mt-0.5">Death Sentences</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-sky-200">
+                  <div class="text-3xl font-bold font-mono text-slate-900">1</div>
+                  <div class="text-[11px] font-bold text-slate-600 uppercase font-mono mt-0.5">Life Sentence</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-sky-200">
+                  <div class="text-2xl font-bold font-mono text-amber-700">4 mos</div>
+                  <div class="text-[11px] font-bold text-slate-600 uppercase font-mono mt-0.5">Avg Prison Time</div>
+                </div>
+              </div>
+
+              <p class="text-sm text-slate-800 leading-relaxed">
+                <strong>Why were judges so lenient?</strong> Weimar’s judges had all worked under the Kaiser. They sympathized with right-wing assassins, seeing them as patriotic soldiers trying to save the Fatherland.
+              </p>
+            </div>
+
+            <!-- Left-Wing Murderers Box -->
+            <div class="bg-red-50/70 p-5 rounded-2xl border border-red-200 space-y-4">
+              <div class="flex items-center justify-between border-b border-red-200 pb-2">
+                <span class="font-bold text-red-950 text-base">22 Left-Wing Murders</span>
+                <span class="text-xs font-mono font-bold text-red-800">e.g. Munich Soviet uprising</span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 text-center">
+                <div class="bg-white p-3 rounded-xl border border-red-200">
+                  <div class="text-3xl font-bold font-mono text-red-600">10</div>
+                  <div class="text-[11px] font-bold text-slate-600 uppercase font-mono mt-0.5">Death Sentences</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-red-200">
+                  <div class="text-3xl font-bold font-mono text-red-600">3</div>
+                  <div class="text-[11px] font-bold text-slate-600 uppercase font-mono mt-0.5">Life Sentences</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-red-200">
+                  <div class="text-2xl font-bold font-mono text-red-600">15 yrs</div>
+                  <div class="text-[11px] font-bold text-slate-600 uppercase font-mono mt-0.5">Avg Prison Time</div>
+                </div>
+              </div>
+
+              <p class="text-sm text-slate-800 leading-relaxed">
+                <strong>Why were judges so harsh?</strong> Judges considered socialists and communists to be mortal enemies of society, sentencing them to executions or decades of hard labor without mercy.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Spotlight Card: Walther Rathenau -->
+          <div class="mt-6 p-5 rounded-2xl bg-amber-50 border border-amber-200">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-200 border border-amber-300 flex items-center justify-center shrink-0 text-amber-900 font-bold">
+                <i data-lucide="target" class="w-6 h-6"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-base font-bold text-slate-900 font-editorial">Key Murder: Walther Rathenau (June 1922)</h4>
+                <p class="text-sm text-slate-800 leading-relaxed">
+                  Foreign Minister Walther Rathenau was gunned down in Berlin by nationalist extremists. He was targeted for three key reasons: he was <strong class="text-amber-900">Jewish</strong>, wealthy, and pursued <span class="glossary-term" onclick="lookupGlossary('Erfüllungspolitik')">Erfüllungspolitik</span> (trying to follow the Versailles treaty to prove its terms were impossible). Over one million Germans marched in his funeral procession.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SECTION 3B: ANATOMY OF THE DOLCHSTOẞLEGENDE -->
+      <div id="container-dolchstoss-anatomy" class="hidden space-y-6">
+        
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div class="max-w-2xl mb-6">
+            <span class="text-xs font-mono uppercase font-bold text-amber-800 tracking-wider">Deconstructing the Myth</span>
+            <h3 class="text-2xl font-bold text-slate-900 font-editorial">Anatomy of the "Stab-in-the-Back" (<span class="glossary-term" onclick="lookupGlossary('Dolchstoßlegende')">Dolchstoßlegende</span>)</h3>
+            <p class="text-sm text-slate-600 mt-1">
+              How did Field Marshal Hindenburg and General Ludendorff blame democratic politicians for their own military defeat? Click each stage:
+            </p>
+          </div>
+
+          <!-- 4 Clickable Step Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="dolchstoss-steps">
+            
+            <button onclick="selectDolchstossStage(1)" id="dolch-step-1" class="dolch-btn text-left p-4 rounded-xl bg-amber-50 border-2 border-amber-500 shadow-xs transition-all">
+              <span class="text-xs font-mono font-bold uppercase text-amber-800">Stage 01</span>
+              <h4 class="text-sm sm:text-base font-bold text-slate-900 font-editorial mt-1">Military Collapse</h4>
+              <p class="text-xs text-slate-600 mt-1">Autumn 1918: German army is broken on the battlefield.</p>
+            </button>
+
+            <button onclick="selectDolchstossStage(2)" id="dolch-step-2" class="dolch-btn text-left p-4 rounded-xl bg-white border border-slate-300 hover:border-slate-400 transition-all">
+              <span class="text-xs font-mono font-bold uppercase text-slate-500">Stage 02</span>
+              <h4 class="text-sm sm:text-base font-bold text-slate-900 font-editorial mt-1">Foreign Soil Illusion</h4>
+              <p class="text-xs text-slate-600 mt-1">Army still in France; German civilians unaware of defeat.</p>
+            </button>
+
+            <button onclick="selectDolchstossStage(3)" id="dolch-step-3" class="dolch-btn text-left p-4 rounded-xl bg-white border border-slate-300 hover:border-slate-400 transition-all">
+              <span class="text-xs font-mono font-bold uppercase text-slate-500">Stage 03</span>
+              <h4 class="text-sm sm:text-base font-bold text-slate-900 font-editorial mt-1">Calculated Handover</h4>
+              <p class="text-xs text-slate-600 mt-1">Generals force civilians to sign the armistice.</p>
+            </button>
+
+            <button onclick="selectDolchstossStage(4)" id="dolch-step-4" class="dolch-btn text-left p-4 rounded-xl bg-white border border-slate-300 hover:border-slate-400 transition-all">
+              <span class="text-xs font-mono font-bold uppercase text-slate-500">Stage 04</span>
+              <h4 class="text-sm sm:text-base font-bold text-slate-900 font-editorial mt-1">The "November Criminals"</h4>
+              <p class="text-xs text-slate-600 mt-1">Politicians branded traitors; democracy poisoned.</p>
+            </button>
+
+          </div>
+
+          <!-- Dynamic Stage Detail Box (Large Readable Text) -->
+          <div id="dolchstoss-stage-detail" class="mt-6 p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm sm:text-base text-slate-800 leading-relaxed">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PRIMARY SOURCE EVIDENCE INSPECTOR -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+        <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <div>
+            <span class="text-xs font-mono uppercase font-bold text-amber-800">Cambridge AO2 Source Skills</span>
+            <h3 class="text-xl font-bold text-slate-900 font-editorial">Source Dossier: Primary Evidence</h3>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="selectSource('sourceA')" id="btn-src-a" class="src-tab-btn px-3 py-1 text-xs font-bold font-mono rounded-lg bg-amber-600 text-white shadow-2xs">Source A</button>
+            <button onclick="selectSource('sourceB')" id="btn-src-b" class="src-tab-btn px-3 py-1 text-xs font-bold font-mono rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Source B</button>
+            <button onclick="selectSource('sourceC')" id="btn-src-c" class="src-tab-btn px-3 py-1 text-xs font-bold font-mono rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Source C</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          <!-- Source Extract Box (7 Cols) -->
+          <div class="lg:col-span-7 space-y-3">
+            <div class="bg-amber-50/50 p-5 rounded-2xl border border-amber-200 font-serif text-slate-800 text-base italic leading-relaxed" id="source-extract-text">
+              "The German people have won all along the line. What is old and rotten has collapsed; militarism is done for! The Hohenzollerns have abdicated! Long live the German Republic!"
+            </div>
+            <div class="flex items-center justify-between text-xs text-slate-600">
+              <span class="font-mono font-medium" id="source-provenance">
+                Philipp Scheidemann, SPD leader, proclaiming the Republic from the Reichstag window, 9 November 1918.
+              </span>
+              <button onclick="readAloudSource()" class="text-xs font-bold text-amber-800 hover:text-amber-950 flex items-center gap-1 bg-amber-100 px-2 py-0.5 rounded">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                <span>Listen</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Examiner Questions & Analysis (5 Cols) -->
+          <div class="lg:col-span-5 bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3 text-sm">
+            <div class="font-bold text-amber-900 uppercase font-mono text-xs flex items-center gap-1.5">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-700"></i>
+              <span>Exam Analysis Prompt (AO2)</span>
+            </div>
+            <p id="source-exam-prompt" class="text-slate-800 font-medium">
+              Why did Scheidemann proclaim the Republic so urgently without consulting Chancellor Friedrich Ebert?
+            </p>
+            <div class="pt-2 border-t border-slate-200">
+              <button onclick="toggleSourceExplanation()" class="text-amber-800 hover:text-amber-950 font-bold flex items-center gap-1.5 text-xs">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span id="src-explain-toggle-text">Show Senior Examiner Breakdown</span>
+              </button>
+              <div id="source-examiner-answer" class="hidden mt-2 p-3.5 bg-white rounded-xl border border-slate-200 text-slate-700 text-sm leading-relaxed">
+                Scheidemann knew Karl Liebknecht of the Spartacists was about to proclaim a "Free Socialist Republic" from the Berlin Palace. Ebert was furious because he wanted a constitutional national assembly to decide the form of state, but Scheidemann acted unilaterally to prevent a communist revolution.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 4: IGCSE EXAM LAB & EVALUATIVE BALANCE SCALE -->
+    <!-- ============================================================== -->
+    <div id="module-exam-lab" class="module-section hidden space-y-6">
+      
+      <!-- Exam Lab Intro -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-rose-800 uppercase tracking-wider mb-1">
+              <span>Cambridge IGCSE Essay &amp; Evaluation Laboratory</span>
+              <span>·</span>
+              <span>Tiered Scaffolding for All Abilities</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">Exam Lab: "Was Weimar Doomed from the Start?"</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              Weigh the evidence. Click on cards to place them on the scale. See how the balance changes between <strong class="text-red-700">Doomed</strong> and <strong class="text-sky-700">Resilient</strong>.
+            </p>
+          </div>
+
+          <!-- Question Switcher -->
+          <div class="flex items-center gap-2">
+            <button onclick="switchExamQuestion('q10')" id="btn-q-10" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-rose-100 border border-rose-300 text-rose-900 shadow-xs">
+              10-Mark Essay (Evaluation)
+            </button>
+            <button onclick="switchExamQuestion('q6')" id="btn-q-6" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700">
+              6-Mark Causation
+            </button>
+            <button onclick="switchExamQuestion('q4')" id="btn-q-4" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700">
+              4-Mark Recall
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW A: 10-MARK DYNAMIC BALANCE SCALE -->
+      <div id="view-exam-10" class="space-y-6">
+        
+        <!-- The Dynamic Visual Balance Scale Card -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div class="text-center max-w-xl mx-auto mb-3">
+            <span class="text-xs font-mono font-bold uppercase text-amber-800 tracking-wider">Cambridge AO2 Evaluative Scale</span>
+            <h3 class="text-2xl font-bold text-slate-900 font-editorial">The Historical Balance Scale</h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Click the cards below to tilt the scale. Notice how each argument tips the historical balance.
+            </p>
+          </div>
+
+          <!-- Scale Graphic (Light, High-Contrast) -->
+          <div class="relative max-w-xl mx-auto h-48 flex items-center justify-center">
+            <svg viewBox="0 0 400 180" class="w-full h-full overflow-visible">
+              <!-- Central Pillar -->
+              <polygon points="190,170 210,170 203,70 197,70" fill="#64748b" />
+              <rect x="175" y="165" width="50" height="8" rx="2" fill="#475569" />
+              <!-- Pivot point -->
+              <circle cx="200" cy="70" r="7" fill="#d97706" />
+
+              <!-- Crossbeam -->
+              <g id="scale-beam" style="transform: rotate(0deg);">
+                <line x1="60" y1="70" x2="340" y2="70" stroke="#334155" stroke-width="4.5" stroke-linecap="round" />
+                
+                <!-- Left Tray (Doomed - Crimson) -->
+                <line x1="60" y1="70" x2="40" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <line x1="60" y1="70" x2="80" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <path d="M 30 120 Q 60 135 90 120 Z" fill="#ef4444" opacity="0.9" />
+
+                <!-- Right Tray (Resilient - Sky Blue) -->
+                <line x1="340" y1="70" x2="320" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <line x1="340" y1="70" x2="360" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <path d="M 310 120 Q 340 135 370 120 Z" fill="#0284c7" opacity="0.9" />
+              </g>
+
+              <!-- Labels -->
+              <text x="60" y="165" fill="#dc2626" font-size="12" font-family="Fraunces, serif" text-anchor="middle" font-weight="bold">DOOMED FROM START</text>
+              <text x="340" y="165" fill="#0369a1" font-size="12" font-family="Fraunces, serif" text-anchor="middle" font-weight="bold">REMARKABLE RESILIENCE</text>
+            </svg>
+          </div>
+
+          <!-- Tally Counters -->
+          <div class="flex items-center justify-center gap-8 text-sm font-mono mt-2">
+            <div class="text-red-700 flex items-center gap-2">
+              <span class="font-bold">Doomed Arguments:</span>
+              <span id="tally-doomed" class="text-base font-bold bg-red-100 px-3 py-0.5 rounded-full border border-red-300">0</span>
+            </div>
+            <div class="text-slate-400 font-sans font-bold">vs</div>
+            <div class="text-sky-700 flex items-center gap-2">
+              <span class="font-bold">Resilience Arguments:</span>
+              <span id="tally-resilient" class="text-base font-bold bg-sky-100 px-3 py-0.5 rounded-full border border-sky-300">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evidence Cards Pool -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-mono uppercase font-bold text-slate-500 tracking-wider">
+              Historical Evidence Cards (Click button to add to tray):
+            </h4>
+            <button onclick="resetScale()" class="text-xs text-amber-700 hover:text-amber-900 font-bold underline">
+              Reset Scale
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="evidence-cards-container">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Dynamic Model Conclusion Box -->
+        <div id="model-paragraph-box" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5 text-amber-600"></i>
+              <h4 class="text-lg font-bold text-slate-900 font-editorial">Model Evaluative Conclusion Framework (Level 5)</h4>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="readAloudModelAnswer()" class="text-xs text-slate-700 hover:text-slate-900 flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-lg">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                <span>Listen</span>
+              </button>
+              <button onclick="copyModelAnswer()" class="text-xs text-amber-900 hover:text-amber-950 flex items-center gap-1 bg-amber-100 px-2.5 py-1 rounded-lg font-semibold">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Copy Paragraph</span>
+              </button>
+            </div>
+          </div>
+          <div id="dynamic-model-text" class="text-sm sm:text-base text-slate-800 leading-relaxed bg-slate-50 p-5 rounded-xl border border-slate-200">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VIEW B: 6-MARK CAUSATION PRACTICE -->
+      <div id="view-exam-6" class="hidden space-y-6">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <span class="text-xs font-mono uppercase font-bold text-amber-800">Cambridge 6-Mark Causation Explainer</span>
+          <h3 class="text-2xl font-bold text-slate-900 font-editorial mt-1">"Why was the Kapp Putsch defeated in March 1920?"</h3>
+          <p class="text-sm text-slate-600 mt-2">
+            To get full 6 marks, provide <strong class="text-slate-900">two fully explained causal factors</strong> with links to the outcome (PEEL structure).
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+            <!-- Factor 1 -->
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex items-center gap-2 text-amber-900 text-sm font-bold">
+                <span class="w-6 h-6 rounded-full bg-amber-200 border border-amber-300 flex items-center justify-center text-xs font-bold">1</span>
+                <span>Factor 1: The General Strike of the Working Class</span>
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                When Ebert’s government fled to Stuttgart, they asked all workers to strike. Berlin completely froze: no water, no gas, no trains, and no electricity. Because civil servants and bank clerks also refused to work, Wolfgang Kapp could not run the government or pay his soldiers.
+              </p>
+            </div>
+
+            <!-- Factor 2 -->
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex items-center gap-2 text-amber-900 text-sm font-bold">
+                <span class="w-6 h-6 rounded-full bg-amber-200 border border-amber-300 flex items-center justify-center text-xs font-bold">2</span>
+                <span>Factor 2: Lack of Support from the Civil Service</span>
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Even though the regular army did not fight Kapp, General von Seeckt also refused to actively join him. The civil servants in Berlin quietly refused to follow Kapp's orders, leaving him completely isolated after just five days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW C: 4-MARK RECALL PRACTICE -->
+      <div id="view-exam-4" class="hidden space-y-6">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <span class="text-xs font-mono uppercase font-bold text-emerald-800">Cambridge 4-Mark Knowledge Recall</span>
+          <h3 class="text-2xl font-bold text-slate-900 font-editorial mt-1">"Describe the events of the Spartacist Uprising in January 1919."</h3>
+          <p class="text-sm text-slate-600 mt-2">
+            A 4-mark question requires 4 clear, separate factual statements.
+          </p>
+
+          <div class="mt-4 space-y-2.5 text-sm">
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 1:</strong> In January 1919, the Spartacist League (led by Karl Liebknecht and Rosa Luxemburg) staged an armed uprising in Berlin.</span>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 2:</strong> They seized newspaper offices and organized a strike of over 100,000 workers to establish a communist government.</span>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 3:</strong> Defense Minister Gustav Noske mobilized the Freikorps (anti-communist ex-soldiers) to crush the rebellion with heavy weapons.</span>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 4:</strong> Over 170 people were killed in street fighting, and both Liebknecht and Luxemburg were murdered without trial.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- MODALS & DRAWERS (Glossary & Exam Criteria) -->
+  <!-- ============================================================== -->
+
+  <!-- GLOSSARY MODAL (Searchable, Clear Definitions) -->
+  <div id="modal-glossary" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 font-editorial">IGCSE Key Vocabulary Glossary</h3>
+            <p class="text-xs text-slate-500">Every essential term explained in plain English and exam context</p>
+          </div>
+        </div>
+        <button onclick="toggleGlossaryModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-200 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Quick Search Bar inside Glossary -->
+      <div class="p-3 border-b border-slate-200 bg-white">
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5"></i>
+          <input type="text" id="glossary-search" oninput="filterGlossary()" placeholder="Search terms (e.g. Armistice, Freikorps, Rathenau)..." class="w-full pl-9 pr-3 py-1.5 text-xs sm:text-sm rounded-lg border border-slate-300 focus:outline-none focus:border-amber-500">
+        </div>
+      </div>
+
+      <div class="p-5 overflow-y-auto space-y-3 custom-scrollbar text-sm" id="glossary-items-container">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAM GUIDE MODAL (Cambridge Mark Scheme) -->
+  <div id="modal-exam-guide" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800">
+            <i data-lucide="award" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 font-editorial">Cambridge Senior Examiner Mark Scheme (0470/0977)</h3>
+            <p class="text-xs text-slate-500">How examiners grade 4-mark, 6-mark, and 10-mark questions</p>
+          </div>
+        </div>
+        <button onclick="toggleExamGuideModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-200 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4 custom-scrollbar text-sm leading-relaxed text-slate-700">
+        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
+          <div class="font-bold text-amber-950 mb-1">Assessment Objective (AO) Breakdown:</div>
+          <p><strong class="text-slate-900">AO1 (Knowledge &amp; Recall):</strong> Accurate dates, pact names, actors, and specific numbers.</p>
+          <p class="mt-1"><strong class="text-slate-900">AO2 (Historical Analysis &amp; Causation):</strong> Explaining reasons, weighing factors, comparing significance, and forming balanced conclusions.</p>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-slate-900 font-editorial text-base">Levels of Response for 10-Mark Questions:</div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="font-mono text-amber-800 font-bold">Level 5 (9–10 marks):</span> Balanced argument explaining BOTH sides (doomed vs. resilient), culminating in a sustained, substantiated judgment that reaches a clear conclusion.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="font-mono text-slate-800 font-bold">Level 4 (7–8 marks):</span> Explains BOTH sides with specific factual evidence, but conclusion is descriptive or asserted without deep evaluation.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="font-mono text-slate-700 font-bold">Level 3 (4–6 marks):</span> Explains ONE side well (e.g. only argues Weimar was doomed), or provides narrative with some explanation.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="font-mono text-slate-500 font-bold">Level 2 (2–3 marks):</span> Identifies factual points without explanatory links to the question.
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-950">
+          <strong class="font-bold">Senior Examiner Secret:</strong> To score in Level 5, do NOT merely write "It was a bit of both." Distinguish between <span class="underline">short-term survival</span> (the republic survived 1918–1920 through working-class strikes and pacts) and <span class="underline">long-term structural weakness</span> (the reliance on unpunished reactionary elites sowed the seeds for collapse in 1930–1933).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-slate-200 bg-white py-4 px-4 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>Cambridge IGCSE History Option B &amp; Depth Study B Lab · Specimen 0470 / 0977</div>
+      <div class="flex items-center gap-3 text-slate-600">
+        <span>AO1 Knowledge</span>
+        <span>·</span>
+        <span>AO2 Causation &amp; Significance</span>
+        <span>·</span>
+        <button onclick="toggleDyslexiaFont()" class="text-amber-800 underline font-medium">Dyslexia Settings</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- JAVASCRIPT STATE ENGINE & DATA MODEL -->
+  <!-- ============================================================== -->
+  <script>
+    // -------------------------------------------------------------
+    // HISTORICAL DATA ARRAYS
+    // -------------------------------------------------------------
+    const TIMELINE_DATA = [
+      {
+        id: "kiel-mutiny",
+        date: "Oct – Nov 1918",
+        shortDate: "Oct 1918",
+        title: "Kiel Mutiny & Kaiser's Abdication",
+        vector: "Left-Wing Revolutionary Threat",
+        vectorType: "left",
+        icon: "anchor",
+        needleAngle: -55,
+        meterMilitary: "Low (Mutiny)",
+        meterPolarization: "Extreme",
+        meterVulnerability: "Critical",
+        nutshell: "German sailors refused an order to fight a suicidal battle against the British Navy. Their mutiny spread into a nationwide revolution. The Kaiser ran away to Holland, and the German Republic was born out of defeat.",
+        summary: "Following the collapse of the Kaiserschlacht offensive, admirals at Wilhelmshaven and Kiel ordered a suicidal last sortie against the British fleet. Sailors mutinied, forming Workers' and Soldiers' Councils (Räte) across German cities. Prince Max of Baden announced Kaiser Wilhelm II's abdication on 9 November as the Kaiser fled to the Netherlands.",
+        actors: [
+          { name: "Kaiser Wilhelm II", role: "Last German Emperor; fled to the Netherlands on 9 Nov 1918." },
+          { name: "Prince Max of Baden", role: "Chancellor who announced the Kaiser's abdication without his permission." },
+          { name: "Philipp Scheidemann", role: "SPD leader who shouted the declaration of the Republic from a window." }
+        ],
+        compromise: "To preempt Karl Liebknecht’s communist declaration, Philipp Scheidemann proclaimed the Republic from the Reichstag. Friedrich Ebert took power reluctantly, inheriting a shattered nation facing Allied naval blockades, mass starvation, and armed unrest.",
+        legacy: "The Republic was branded with the stigma of imperial defeat from its opening hour. Conservative Germans regarded the new democratic state as illegitimate and born of treason.",
+        examinerTip: "Examiners look for the distinction between military reality (Hindenburg and Ludendorff admitting defeat) and popular revolt (sailors refusing to die for imperial vanity).",
+        bars: { spd: 85, army: 30, violence: 80 },
+        quiz: {
+          q: "What directly triggered the sailor mutiny at Kiel in late October 1918?",
+          options: [
+            "An order for a suicidal naval attack against the British Royal Navy",
+            "The signing of the Treaty of Versailles in Paris",
+            "A decree by Friedrich Ebert banning trade unions",
+            "The assassination of Walther Rathenau"
+          ],
+          correct: 0,
+          explanation: "Sailors refused to be sacrificed in a pointless fleet battle after the high command had already acknowledged the war was lost."
+        }
+      },
+      {
+        id: "ebert-groener",
+        date: "10–11 Nov 1918",
+        shortDate: "Nov 1918",
+        title: "Ebert-Groener Pact & Armistice",
+        vector: "Military Survival Compromise",
+        vectorType: "military",
+        needleAngle: 5,
+        meterMilitary: "Autonomous",
+        meterPolarization: "High",
+        meterVulnerability: "Severe",
+        nutshell: "New Chancellor Ebert made a secret telephone deal with General Groener: the army promised to protect the new government, but only if Ebert protected the old imperial officers and stopped a communist revolution.",
+        summary: "On 10 November 1918, Chancellor Friedrich Ebert made a secret telephone pact with General Wilhelm Groener. The Army pledged to support the provisional government against communist revolution; in return, Ebert guaranteed the army’s officer hierarchy and autonomy would remain untouched. On 11 November, civilians signed the Armistice at Compiègne.",
+        actors: [
+          { name: "Friedrich Ebert", role: "SPD leader and first Chancellor/President of the Weimar Republic." },
+          { name: "General Wilhelm Groener", role: "New head of the German Army after Ludendorff resigned." },
+          { name: "Matthias Erzberger", role: "Civilian politician who signed the Armistice; later murdered by nationalists." }
+        ],
+        compromise: "Ebert sacrificed the opportunity to purge royalist, anti-democratic imperial officers from the Reichswehr in order to guarantee military force against left-wing revolution.",
+        legacy: "Left the German military as an autonomous 'state within a state' (Staat im Staate). The military felt no loyalty to democratic principles and later refused to protect the republic during the Kapp Putsch.",
+        examinerTip: "Always explain that this pact was secret. It protected the republic in the immediate term, but fatally undermined its democratic foundations.",
+        bars: { spd: 70, army: 75, violence: 60 },
+        quiz: {
+          q: "Under the Ebert-Groener Pact, what did General Groener promise Friedrich Ebert?",
+          options: [
+            "The military would defend the republic against left-wing revolution",
+            "The military would launch a renewed invasion of France",
+            "The army would disband all Freikorps units immediately",
+            "The officer corps would swear an unconditional oath to the Weimar constitution"
+          ],
+          correct: 0,
+          explanation: "Groener guaranteed the army's armed backing to preserve public order and crush communist insurgencies in exchange for protecting the officer corps."
+        }
+      },
+      {
+        id: "spartacist-uprising",
+        date: "January 1919",
+        shortDate: "Jan 1919",
+        title: "Spartacist Uprising & Freikorps Violence",
+        vector: "Left-Wing Revolutionary Threat",
+        vectorType: "left",
+        needleAngle: -60,
+        meterMilitary: "Brutal (Freikorps)",
+        meterPolarization: "Extreme",
+        meterVulnerability: "Critical",
+        nutshell: "Berlin communists tried to overthrow the government. Defense Minister Noske hired right-wing ex-soldiers (Freikorps) who brutally crushed the workers and murdered Rosa Luxemburg and Karl Liebknecht.",
+        summary: "The Spartacist League (newly formed KPD) led by Karl Liebknecht and Rosa Luxemburg attempted a socialist revolution in Berlin. 100,000 workers went on strike and occupied newspaper offices. Defense Minister Gustav Noske unleashed the right-wing Freikorps, who crushed the revolt with extreme brutality.",
+        actors: [
+          { name: "Rosa Luxemburg", role: "Brilliant Marxist theorist and leader of the Spartacist League; murdered without trial." },
+          { name: "Karl Liebknecht", role: "Radical socialist co-founder of the KPD; shot by Freikorps officers." },
+          { name: "Gustav Noske", role: "SPD Defense Minister who mobilized the Freikorps ('Someone must be the bloodhound')." }
+        ],
+        compromise: "A Social Democratic government commissioned ultra-nationalist, monarchist paramilitaries (Freikorps) to slaughter fellow socialist working-class revolutionaries.",
+        legacy: "Permanently fractured the political Left. The KPD could never forgive the SPD for the murder of Luxemburg and Liebknecht, making an anti-fascist united front impossible in the 1930s.",
+        examinerTip: "Note that while the Spartacist threat was loud, it lacked coherent military organization, making it far easier for the heavily armed Freikorps to extinguish.",
+        bars: { spd: 55, army: 85, violence: 95 },
+        quiz: {
+          q: "Who were the Freikorps deployed by Gustav Noske in January 1919?",
+          options: [
+            "Right-wing volunteer paramilitary units composed of ex-soldiers",
+            "French Allied peacekeeping troops stationed in Berlin",
+            "Armored police officers loyal to the Communist Party",
+            "Civilian volunteer nurses and factory workers"
+          ],
+          correct: 0,
+          explanation: "Freikorps were nationalistic, violently anti-communist demobilized First World War veterans."
+        }
+      },
+      {
+        id: "kapp-putsch",
+        date: "March 1920",
+        shortDate: "Mar 1920",
+        title: "The Kapp Putsch & General Strike",
+        vector: "Right-Wing Reactionary Threat",
+        vectorType: "right",
+        needleAngle: 55,
+        meterMilitary: "Insubordinate",
+        meterPolarization: "Critical",
+        meterVulnerability: "Near-Collapse",
+        nutshell: "Right-wing troops marched into Berlin to destroy democracy. When the regular army refused to fight them, German workers held a massive General Strike that turned off water, gas, and trains, stopping the coup.",
+        summary: "When the government moved to disband the Marinebrigade Ehrhardt under Versailles treaty limits (100,000-man army), 5,000 Freikorps marched on Berlin under General von Lüttwitz and Wolfgang Kapp. The government fled to Stuttgart. Army Chief von Seeckt refused to intervene ('Reichswehr does not fire upon Reichswehr'). A massive general strike by workers paralyzed the capital and crushed the putsch.",
+        actors: [
+          { name: "Wolfgang Kapp", role: "Right-wing politician who declared himself Chancellor during the 5-day coup." },
+          { name: "General Walther von Lüttwitz", role: "Military commander who ordered troops into Berlin." },
+          { name: "General Hans von Seeckt", role: "Army Chief who refused to defend the republic: 'Reichswehr does not fire upon Reichswehr.'" }
+        ],
+        compromise: "Because the army defected in its duty, the democratic government was forced to plead with socialist trade unions to paralyze the nation's economy to save it.",
+        legacy: "Exposed the hollow loyalty of the Reichswehr and the bias of the legal system: right-wing putschists were granted amnesty or mild sentences, showing the state had no control over the military.",
+        examinerTip: "Memorize General von Seeckt's quote: 'Reichswehr does not fire upon Reichswehr.' This is the single most valuable quotation for a 10-mark Cambridge answer.",
+        bars: { spd: 65, army: 90, violence: 85 },
+        quiz: {
+          q: "How was the Kapp Putsch ultimately defeated after five days?",
+          options: [
+            "By a nationwide general strike organized by workers and civil servants",
+            "By an artillery barrage ordered by General Hans von Seeckt",
+            "By the intervention of British and French occupation troops",
+            "By the voluntary surrender of Wolfgang Kapp to the police"
+          ],
+          correct: 0,
+          explanation: "The strike cut water, gas, electricity, and rail transit, making it impossible for Kapp to administer the state."
+        }
+      },
+      {
+        id: "political-murders",
+        date: "1920 – 1922",
+        shortDate: "1920–22",
+        title: "Nationalist Terror & Rathenau's Murder",
+        vector: "Right-Wing Reactionary Terror",
+        vectorType: "right",
+        needleAngle: 40,
+        meterMilitary: "Complicit / Passive",
+        meterPolarization: "Toxic",
+        meterVulnerability: "Severe",
+        nutshell: "Right-wing terrorists assassinated 354 people, including Foreign Minister Walther Rathenau. Conservative judges gave them tiny punishments (averaging 4 months), while left-wing rebels were executed.",
+        summary: "Right-wing secret societies such as Organisation Consul launched a systematic terror campaign against Weimar leaders. In June 1922, Foreign Minister Walther Rathenau was assassinated in Berlin for pursuing Erfüllungspolitik (Fulfillment Policy) and being Jewish. Between 1919 and 1922, 354 of 376 political murders were committed by right-wing nationalists, yet zero right-wing killers were executed.",
+        actors: [
+          { name: "Walther Rathenau", role: "Weimar Foreign Minister assassinated in June 1922 by right-wing terrorists." },
+          { name: "Emil Julius Gumbel", role: "Mathematician who exposed that judges favored right-wing killers over left-wingers." },
+          { name: "Organisation Consul", role: "Secret right-wing terrorist squad that killed democratic politicians." }
+        ],
+        compromise: "The republic allowed imperial judges to remain on the bench, trusting in legal continuity rather than reforming the judicial apparatus.",
+        legacy: "Institutionalized judicial bias proved to the public that right-wing violence was tolerated by the state, while left-wing dissent was ruthlessly suppressed.",
+        examinerTip: "Reference E.J. Gumbel’s statistics in essays (354 Right vs. 22 Left murders) to prove judicial complicity with empirical evidence.",
+        bars: { spd: 50, army: 80, violence: 70 },
+        quiz: {
+          q: "Why was Foreign Minister Walther Rathenau targeted for assassination in June 1922?",
+          options: [
+            "He was Jewish and pursued Erfüllungspolitik (fulfilling the Versailles terms)",
+            "He was a founding commander of the Freikorps brigades",
+            "He signed the military alliance with the Soviet Union at Kiel",
+            "He ordered the execution of Karl Liebknecht"
+          ],
+          correct: 0,
+          explanation: "Nationalists hated Rathenau because he was Jewish, wealthy, and attempted to fulfill treaty terms to win international respect."
+        }
+      }
+    ];
+
+    const GLOSSARY_TERMS = [
+      { 
+        term: "Abdication", 
+        simple: "When a king or queen steps down from the throne.",
+        def: "The formal act of giving up monarchical power. Kaiser Wilhelm II was forced to abdicate on 9 November 1918." 
+      },
+      { 
+        term: "Armistice", 
+        simple: "An agreement by both sides in a war to stop shooting (a ceasefire).",
+        def: "The ceasefire signed on 11 November 1918 in a railway carriage at Compiègne, France, ending the First World War." 
+      },
+      { 
+        term: "Dolchstoßlegende", 
+        simple: "The 'Stab-in-the-Back' conspiracy theory claiming the German army was never beaten in battle, but betrayed at home.",
+        def: "The myth created by Hindenburg and Ludendorff claiming that the German army was winning the war, but was betrayed ('stabbed in the back') by socialists, communists, and Jews on the home front." 
+      },
+      { 
+        term: "November Criminals", 
+        simple: "The insulting name right-wing nationalists gave to politicians who signed the 1918 peace treaty.",
+        def: "Derogatory label used by nationalists and Nazis to vilify democratic politicians (like Ebert and Erzberger) who signed the 1918 armistice and 1919 Treaty of Versailles." 
+      },
+      { 
+        term: "Ebert-Groener Pact", 
+        simple: "Secret phone call deal: the army defends the government if the government protects army officers.",
+        def: "Secret 10 Nov 1918 telephone deal between Chancellor Ebert and General Groener: army loyalty in exchange for preserving officer autonomy and stopping a communist revolution." 
+      },
+      { 
+        term: "Freikorps", 
+        simple: "Armed ex-soldiers who hated communists and worked as private right-wing militias.",
+        def: "Private volunteer paramilitary brigades consisting of nationalist, anti-communist demobilized First World War veterans used by Noske to crush left-wing uprisings." 
+      },
+      { 
+        term: "Kaiserschlacht", 
+        simple: "Germany's final, desperate attack in spring 1918 before American troops arrived.",
+        def: "The German spring offensive of March 1918, Germany's last massive gamble to win the First World War before American soldiers arrived in force." 
+      },
+      { 
+        term: "Räte", 
+        simple: "Councils of workers and soldiers set up during the revolution (like Russian Soviets).",
+        def: "Workers' and Soldiers' Councils formed during the German Revolution of November 1918, modeled after the Russian Soviets, demanding power to the working class." 
+      },
+      { 
+        term: "Erfüllungspolitik", 
+        simple: "The 'Fulfillment Policy'—trying to obey the Versailles treaty to show the world that its demands were impossible.",
+        def: "The moderate policy pursued by Walther Rathenau, attempting to comply with Versailles terms to prove to the Allies that the reparations were impossible to pay." 
+      },
+      { 
+        term: "Judicial Bias", 
+        simple: "Unfair judges who treated right-wing killers gently while sentencing left-wingers to death.",
+        def: "The institutional prejudice of Weimar's conservative judges, who punished left-wing rebels with execution or long sentences while granting leniency or immunity to right-wing murderers." 
+      },
+      { 
+        term: "Kapp Putsch", 
+        simple: "March 1920 right-wing army rebellion defeated by a massive working-class general strike.",
+        def: "March 1920 far-right attempt to overthrow the government led by Wolfgang Kapp and General von Lüttwitz; defeated by a national general strike." 
+      },
+      { 
+        term: "Spartacist League", 
+        simple: "German communist group led by Rosa Luxemburg and Karl Liebknecht.",
+        def: "Far-left revolutionary faction led by Rosa Luxemburg and Karl Liebknecht that became the Communist Party of Germany (KPD)." 
+      }
+    ];
+
+    const EVIDENCE_CARDS = [
+      {
+        id: "c1",
+        side: "doomed",
+        title: "Dolchstoßlegende Myth",
+        simple: "Millions believed democracy was born out of treason and betrayal.",
+        detail: "The 'Stab-in-the-Back' myth convinced millions that democracy was born from treason, permanently delegitimizing the republic among nationalists."
+      },
+      {
+        id: "c2",
+        side: "resilient",
+        title: "Working-Class General Strike",
+        simple: "Millions of ordinary workers went on strike and saved democracy during the Kapp Putsch.",
+        detail: "When the military deserted during the Kapp Putsch, massive working-class solidarity paralyzed Berlin and preserved the constitutional government."
+      },
+      {
+        id: "c3",
+        side: "doomed",
+        title: "Disloyal Reichswehr (Army)",
+        simple: "The army refused to defend the government against right-wing rebels.",
+        detail: "General von Seeckt’s refusal to defend the state ('Reichswehr does not fire upon Reichswehr') proved the army was an autonomous state within a state."
+      },
+      {
+        id: "c4",
+        side: "resilient",
+        title: "Preserved Government Services",
+        simple: "Ebert managed to feed millions of hungry civilians and send 8 million soldiers home safely.",
+        detail: "Ebert successfully organized food distribution, demobilized 8 million soldiers peacefully, and maintained public services amidst total collapse."
+      },
+      {
+        id: "c5",
+        side: "doomed",
+        title: "Biased Imperial Judges",
+        simple: "Judges let right-wing killers off with tiny sentences, poisoning faith in the law.",
+        detail: "Imperial judges granted virtual impunity to 354 right-wing political killers, actively undermining the rule of law and public faith in justice."
+      },
+      {
+        id: "c6",
+        side: "resilient",
+        title: "Europe's Most Democratic Constitution",
+        simple: "Every adult man and woman got the vote, plus full free speech and freedom of belief.",
+        detail: "Weimar created one of Europe’s most progressive constitutions: universal suffrage for men and women, proportional representation, and civil liberties."
+      },
+      {
+        id: "c7",
+        side: "doomed",
+        title: "Divided Left-Wing Working Class",
+        simple: "Communists and Social Democrats hated each other so much they couldn't unite against Hitler later.",
+        detail: "Noske's deployment of the Freikorps and the murder of Luxemburg/Liebknecht created an unbridgeable rift between the SPD and KPD."
+      },
+      {
+        id: "c8",
+        side: "resilient",
+        title: "Voters Picked Moderate Parties",
+        simple: "In the first election in 1919, over 76% of Germans voted for democratic parties.",
+        detail: "Unlike Russia in 1917, Germany held free national elections in January 1919; moderates secured over 76% of votes for pro-republic parties."
+      }
+    ];
+
+    const SOURCES_DATA = {
+      sourceA: {
+        text: "\"The German people have won all along the line. What is old and rotten has collapsed; militarism is done for! The Hohenzollerns have abdicated! Long live the German Republic! Long live freedom, peace, and brotherhood!\"",
+        provenance: "Philipp Scheidemann, SPD leader, proclaiming the Republic from a window of the Reichstag, 9 November 1918.",
+        prompt: "Why did Scheidemann proclaim the Republic so urgently, and how does this reveal early SPD anxiety about communist revolution?",
+        explanation: "Scheidemann acted without consulting Friedrich Ebert, who was furious. Scheidemann had heard that Spartacist leader Karl Liebknecht was about to proclaim a Soviet-style communist republic from the Berlin Palace. Scheidemann moved first to capture working-class allegiance for a parliamentary system, highlighting how Weimar was born under acute ideological panic."
+      },
+      sourceB: {
+        text: "\"Reichswehr does not fire upon Reichswehr! When Reichswehr fires on Reichswehr, the whole foundation of the state is broken. If the government orders me to fight the troops of Captain Ehrhardt, I must refuse.\"",
+        provenance: "General Hans von Seeckt, Chief of the Truppenamt (Reichswehr command), refusing Defense Minister Noske's order to defend Berlin against the Kapp Putsch, March 1920.",
+        prompt: "How does General von Seeckt's statement prove that the Ebert-Groener Pact was an unequal Faustian bargain for the Weimar Republic?",
+        explanation: "While Ebert had guaranteed the military’s privileges in November 1918 expecting unconditional loyalty, Seeckt's response proved the military was loyal only to its own officer corps. The Reichswehr was willing to violently massacre left-wing workers (Spartacists), but refused to defend the democratic constitution against fellow right-wing soldiers."
+      },
+      sourceC: {
+        text: "\"An undefeated German army, standing victorious on the enemy's soil, was struck in the back by the daggers of socialists and revolutionaries at home! The politicians in Berlin stole Germany's victory!\"",
+        provenance: "Adapted from nationalist political broadsheets and postcards circulating in Munich and Berlin, 1919–1920.",
+        prompt: "What was the political purpose of this postcard, and why was it particularly effective among demobilized soldiers?",
+        explanation: "The purpose was to deflect blame from Ludendorff and Hindenburg's disastrous military strategy onto democratic politicians ('November Criminals') and Jews. Demobilized veterans embraced this conspiracy because it spared them the psychological humiliation of military defeat, transforming their sacrifice into an unearned betrayal."
+      }
+    };
+
+    const DOLCHSTOSS_STAGES = {
+      1: {
+        title: "Stage 01: The Reality of Military Collapse",
+        text: "By August 1918, Germany had lost the war on the battlefield. The Kaiserschlacht offensive had run out of steam, and millions of well-equipped American soldiers were pouring into France. Generals Ludendorff and Hindenburg privately warned the Kaiser that an armistice had to be signed within 24 hours to prevent the army being completely wiped out."
+      },
+      2: {
+        title: "Stage 02: The Illusion of Fighting on Foreign Soil",
+        text: "Because military censors had lied to the German public for four years promising that victory was moments away, ordinary Germans had no idea how desperate the situation was. When the ceasefire came into effect on 11 November 1918, German soldiers were still standing in France and Belgium; no Allied armies had crossed into Germany. This made civilians ask: 'If we were in France, why did we surrender?'"
+      },
+      3: {
+        title: "Stage 03: The High Command's Calculated Handover",
+        text: "General Ludendorff was politically cunning. Knowing defeat was inevitable, he advised the Kaiser to hand over power to a civilian democratic government. This achieved two things: it pleased US President Woodrow Wilson (who only wanted to negotiate with a democracy), and it ensured that democratic politicians—not the military generals—would be blamed for signing the surrender."
+      },
+      4: {
+        title: "Stage 04: The 'November Criminals' Smear Weapon",
+        text: "Immediately after the war, Field Marshal Hindenburg told a parliamentary committee that the army had been 'stabbed in the back' by socialists, communists, and Jews on the home front. Right-wing newspapers quickly branded the democratic politicians who signed the armistice as the 'November Criminals.' This powerful lie poisoned public trust in democracy from day one."
+      }
+    };
+
+    // -------------------------------------------------------------
+    // RUNTIME APPLICATION STATE
+    // -------------------------------------------------------------
+    let currentTimelineIndex = 0;
+    let currentCompareFocus = 'all';
+    let currentSourceId = 'sourceA';
+    let learningMode = 'core'; // 'core' | 'higher'
+    let isDyslexiaFont = false;
+    let isSpeaking = false;
+    let balanceState = {
+      doomedCount: 0,
+      resilientCount: 0,
+      placedCards: {}
+    };
+
+    // -------------------------------------------------------------
+    // INITIALIZATION
+    // -------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      renderTimelineNodes();
+      renderSimplifiedStoryboard();
+      renderCurrentTimelineEvent();
+      renderGlossary();
+      renderEvidenceCards();
+      updateModelParagraph();
+      lucide.createIcons();
+    });
+
+    // -------------------------------------------------------------
+    // ACCESSIBILITY & DIFFERENTIATION HANDLERS
+    // -------------------------------------------------------------
+    function toggleDyslexiaFont() {
+      isDyslexiaFont = !isDyslexiaFont;
+      document.body.classList.toggle('dyslexia-font', isDyslexiaFont);
+      const label = document.getElementById('dyslexia-btn-label');
+      if (label) {
+        label.textContent = isDyslexiaFont ? 'Dyslexia Font: ON' : 'Dyslexia Font: Off';
+      }
+      const btn = document.getElementById('btn-dyslexia');
+      if (btn) {
+        btn.classList.toggle('bg-amber-100', isDyslexiaFont);
+        btn.classList.toggle('border-amber-400', isDyslexiaFont);
+      }
+    }
+
+    function setTextSize(size) {
+      if (size === 'large') {
+        document.body.classList.add('text-lg-mode');
+        document.getElementById('btn-size-large').classList.add('bg-slate-300', 'text-slate-900');
+        document.getElementById('btn-size-normal').classList.remove('bg-slate-200', 'text-slate-900');
+        document.getElementById('btn-size-normal').classList.add('text-slate-600');
+      } else {
+        document.body.classList.remove('text-lg-mode');
+        document.getElementById('btn-size-normal').classList.add('bg-slate-200', 'text-slate-900');
+        document.getElementById('btn-size-large').classList.remove('bg-slate-300', 'text-slate-900');
+        document.getElementById('btn-size-large').classList.add('text-slate-600');
+      }
+    }
+
+    function setLearningMode(mode) {
+      learningMode = mode;
+      const btnCore = document.getElementById('mode-btn-core');
+      const btnHigher = document.getElementById('mode-btn-higher');
+
+      if (mode === 'core') {
+        btnCore.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-amber-600 text-white shadow-xs';
+        btnHigher.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-600 hover:text-slate-900';
+        // Auto-open nutshelled views, keep accordions closed by default
+        closeAllAccordions();
+      } else {
+        btnHigher.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-amber-600 text-white shadow-xs';
+        btnCore.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-600 hover:text-slate-900';
+        // Open examiner accordions
+        openAllAccordions();
+      }
+    }
+
+    // Speech Synthesis Narrator (Read Aloud)
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) {
+        alert('Text-to-speech is not supported in this browser.');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      if (isSpeaking) {
+        isSpeaking = false;
+        updateAudioButton(false);
+        return;
+      }
+
+      const cleanText = text.replace(/<[^>]*>/g, '');
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.rate = 0.95; // Slightly slower for clarity
+      utterance.pitch = 1.0;
+
+      utterance.onstart = () => {
+        isSpeaking = true;
+        updateAudioButton(true);
+      };
+      utterance.onend = () => {
+        isSpeaking = false;
+        updateAudioButton(false);
+      };
+      utterance.onerror = () => {
+        isSpeaking = false;
+        updateAudioButton(false);
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function updateAudioButton(active) {
+      const label = document.getElementById('audio-btn-label');
+      const btn = document.getElementById('btn-audio-narrator');
+      if (label && btn) {
+        if (active) {
+          label.textContent = "Stop Voice";
+          btn.classList.add('bg-blue-100', 'border-blue-400', 'text-blue-900');
+        } else {
+          label.textContent = "Read Aloud";
+          btn.classList.remove('bg-blue-100', 'border-blue-400', 'text-blue-900');
+        }
+      }
+    }
+
+    function toggleAudioReading() {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+        updateAudioButton(false);
+      } else {
+        readAloudCurrentSummary();
+      }
+    }
+
+    function readAloudCurrentSummary() {
+      const data = TIMELINE_DATA[currentTimelineIndex];
+      const text = `${data.title}. ${data.nutshell}. Government compromise: ${data.compromise}`;
+      speakText(text);
+    }
+
+    function readAloudSource() {
+      const src = SOURCES_DATA[currentSourceId];
+      speakText(`${src.text}. Provenance: ${src.provenance}. Examiner explanation: ${src.explanation}`);
+    }
+
+    function readAloudJudicialComparison() {
+      const text = "Weimar courts: Out of 354 right-wing political murders, zero received death sentences, and the average prison sentence was only four months. Out of 22 left-wing murders, ten received death sentences, and the average sentence was fifteen years.";
+      speakText(text);
+    }
+
+    function readAloudModelAnswer() {
+      const text = document.getElementById('dynamic-model-text').innerText;
+      speakText(text);
+    }
+
+    // -------------------------------------------------------------
+    // ACCORDION CONTROLLERS (PROGRESSIVE DISCLOSURE)
+    // -------------------------------------------------------------
+    function toggleAccordion(id) {
+      const content = document.getElementById(`acc-content-${id.replace('acc-', '')}`);
+      const icon = document.getElementById(`acc-icon-${id.replace('acc-', '')}`);
+      if (!content) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function openAllAccordions() {
+      ['compromise', 'legacy', 'examiner'].forEach(key => {
+        const c = document.getElementById(`acc-content-${key}`);
+        const i = document.getElementById(`acc-icon-${key}`);
+        if (c) c.classList.remove('hidden');
+        if (i) i.style.transform = 'rotate(180deg)';
+      });
+    }
+
+    function closeAllAccordions() {
+      ['compromise', 'legacy', 'examiner'].forEach(key => {
+        const c = document.getElementById(`acc-content-${key}`);
+        const i = document.getElementById(`acc-icon-${key}`);
+        if (c) c.classList.add('hidden');
+        if (i) i.style.transform = 'rotate(0deg)';
+      });
+    }
+
+    // -------------------------------------------------------------
+    // NAVIGATION TABS
+    // -------------------------------------------------------------
+    function switchTab(tabId) {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+        updateAudioButton(false);
+      }
+
+      document.querySelectorAll('.module-section').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(btn => {
+        btn.classList.remove('text-amber-900', 'bg-amber-50', 'border', 'border-amber-200', 'shadow-xs');
+        btn.classList.add('text-slate-600');
+      });
+
+      const activeModule = document.getElementById(`module-${tabId}`);
+      if (activeModule) activeModule.classList.remove('hidden');
+
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-600');
+        activeBtn.classList.add('text-amber-900', 'bg-amber-50', 'border', 'border-amber-200', 'shadow-xs');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 1: TIMELINE CONTROLLER
+    // -------------------------------------------------------------
+    function setTimelineView(view) {
+      const scrub = document.getElementById('timeline-scrubber-view');
+      const simp = document.getElementById('timeline-simplified-view');
+      const btnScrub = document.getElementById('btn-view-scrubber');
+      const btnSimp = document.getElementById('btn-view-simplified');
+
+      if (view === 'scrubber') {
+        scrub.classList.remove('hidden');
+        simp.classList.add('hidden');
+        btnScrub.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-slate-900 shadow-xs transition-all';
+        btnSimp.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 transition-all';
+      } else {
+        scrub.classList.add('hidden');
+        simp.classList.remove('hidden');
+        btnSimp.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-white text-slate-900 shadow-xs transition-all';
+        btnScrub.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 transition-all';
+      }
+      lucide.createIcons();
+    }
+
+    function renderTimelineNodes() {
+      const container = document.getElementById('timeline-nodes-container');
+      container.innerHTML = '';
+
+      TIMELINE_DATA.forEach((item, index) => {
+        const btn = document.createElement('button');
+        btn.className = `p-3 rounded-xl text-left transition-all border ${
+          index === currentTimelineIndex
+            ? 'bg-amber-50 border-2 border-amber-500 shadow-xs'
+            : 'bg-white border-slate-200 hover:border-slate-300'
+        }`;
+        btn.onclick = () => selectTimelineIndex(index);
+
+        btn.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold uppercase text-amber-700">${item.shortDate}</span>
+            <span class="text-[11px] font-mono text-slate-400">Node 0${index + 1}</span>
+          </div>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 font-editorial truncate mt-1">${item.title}</div>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    function renderSimplifiedStoryboard() {
+      const container = document.getElementById('simplified-cards-grid');
+      container.innerHTML = '';
+
+      TIMELINE_DATA.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-3";
+        card.innerHTML = `
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+            <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full ${
+              item.vectorType === 'left' ? 'bg-red-100 text-red-800' : item.vectorType === 'right' ? 'bg-sky-100 text-sky-800' : 'bg-amber-100 text-amber-800'
+            }">${item.shortDate}</span>
+            <span class="text-xs font-mono font-bold text-slate-400">Step 0${index + 1}</span>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 font-editorial">${item.title}</h4>
+          <p class="text-sm text-slate-700 leading-relaxed font-medium bg-slate-50 p-3 rounded-xl border border-slate-100">${item.nutshell}</p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500">Key Consequence:</span>
+            <button onclick="setTimelineView('scrubber'); selectTimelineIndex(${index});" class="text-xs font-bold text-amber-700 hover:text-amber-900 underline">
+              View Detailed Analysis →
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectTimelineIndex(index) {
+      currentTimelineIndex = index;
+      renderTimelineNodes();
+      renderCurrentTimelineEvent();
+      lucide.createIcons();
+    }
+
+    function stepTimeline(dir) {
+      let next = currentTimelineIndex + dir;
+      if (next < 0) next = TIMELINE_DATA.length - 1;
+      if (next >= TIMELINE_DATA.length) next = 0;
+      selectTimelineIndex(next);
+    }
+
+    function renderCurrentTimelineEvent() {
+      const data = TIMELINE_DATA[currentTimelineIndex];
+      document.getElementById('timeline-step-indicator').textContent = `${currentTimelineIndex + 1} / ${TIMELINE_DATA.length}`;
+
+      document.getElementById('event-date').textContent = data.date;
+      document.getElementById('event-title').textContent = data.title;
+      document.getElementById('event-nutshell').textContent = data.nutshell;
+      document.getElementById('event-compromise').textContent = data.compromise;
+      document.getElementById('event-legacy').textContent = data.legacy;
+      document.getElementById('event-examiner-tip').textContent = data.examinerTip;
+
+      // Threat Badge
+      const vectorBadge = document.getElementById('event-badge-vector');
+      vectorBadge.textContent = data.vector;
+      if (data.vectorType === 'left') {
+        vectorBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono uppercase font-bold bg-red-100 text-red-800 border border-red-300';
+      } else if (data.vectorType === 'right') {
+        vectorBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono uppercase font-bold bg-sky-100 text-sky-800 border border-sky-300';
+      } else {
+        vectorBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono uppercase font-bold bg-amber-100 text-amber-800 border border-amber-300';
+      }
+
+      // People / Actors
+      const actorsContainer = document.getElementById('event-actors');
+      actorsContainer.innerHTML = '';
+      data.actors.forEach(actor => {
+        const span = document.createElement('div');
+        span.className = 'group relative inline-block';
+        span.innerHTML = `
+          <button class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 font-semibold flex items-center gap-1.5 transition-colors">
+            <i data-lucide="user" class="w-3.5 h-3.5 text-slate-500"></i>
+            <span>${actor.name}</span>
+          </button>
+          <div class="hidden group-hover:block absolute bottom-full mb-2 left-0 z-20 w-64 p-2.5 bg-slate-900 text-white text-xs rounded-xl shadow-lg border border-slate-700 leading-snug">
+            ${actor.role}
+          </div>
+        `;
+        actorsContainer.appendChild(span);
+      });
+
+      // Pendulum needle
+      const needle = document.getElementById('pendulum-needle');
+      needle.style.transform = `rotate(${data.needleAngle}deg)`;
+
+      const pendLabel = document.getElementById('pendulum-label');
+      const pendSubtext = document.getElementById('pendulum-subtext');
+      if (data.vectorType === 'left') {
+        pendLabel.textContent = "Left-Wing Revolutionary Threat";
+        pendLabel.className = "font-bold text-red-700 text-base mt-0.5";
+        pendSubtext.textContent = "Workers' and soldiers' councils threatening to replace parliamentary republic with Soviets.";
+      } else if (data.vectorType === 'right') {
+        pendLabel.textContent = "Right-Wing Militaristic Reaction";
+        pendLabel.className = "font-bold text-sky-800 text-base mt-0.5";
+        pendSubtext.textContent = "Freikorps paramilitaries and imperial officers defying the civilian democratic state.";
+      } else {
+        pendLabel.textContent = "Fragile Republican Compromise";
+        pendLabel.className = "font-bold text-amber-800 text-base mt-0.5";
+        pendSubtext.textContent = "Civilian politicians making secret bargains with the Imperial officer corps to survive.";
+      }
+
+      // Bar meters
+      document.getElementById('bar-spd-val').textContent = `${data.bars.spd}%`;
+      document.getElementById('bar-spd').style.width = `${data.bars.spd}%`;
+      document.getElementById('bar-army-val').textContent = `${data.bars.army}%`;
+      document.getElementById('bar-army').style.width = `${data.bars.army}%`;
+
+      // Micro-quiz
+      document.getElementById('quiz-question').textContent = data.quiz.q;
+      document.getElementById('quiz-status').textContent = 'Unanswered';
+      document.getElementById('quiz-status').className = 'text-xs font-mono font-bold text-slate-500';
+      const quizFeedback = document.getElementById('quiz-feedback');
+      quizFeedback.classList.add('hidden');
+
+      const optionsContainer = document.getElementById('quiz-options');
+      optionsContainer.innerHTML = '';
+      data.quiz.options.forEach((opt, idx) => {
+        const optBtn = document.createElement('button');
+        optBtn.className = 'w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs sm:text-sm text-slate-800 transition-colors flex items-center gap-2.5 font-medium';
+        optBtn.onclick = () => answerQuiz(idx, data.quiz);
+        optBtn.innerHTML = `
+          <span class="w-5 h-5 rounded-md bg-white border border-slate-300 text-xs font-mono font-bold flex items-center justify-center text-slate-700 shrink-0">${String.fromCharCode(65 + idx)}</span>
+          <span class="leading-tight">${opt}</span>
+        `;
+        optionsContainer.appendChild(optBtn);
+      });
+    }
+
+    function answerQuiz(selectedIdx, quizData) {
+      const status = document.getElementById('quiz-status');
+      const feedback = document.getElementById('quiz-feedback');
+      feedback.classList.remove('hidden');
+
+      if (selectedIdx === quizData.correct) {
+        status.textContent = 'Correct (AO1)';
+        status.className = 'text-xs font-mono font-bold text-emerald-700';
+        feedback.className = 'mt-3 text-xs sm:text-sm p-3 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-950 font-medium';
+        feedback.innerHTML = `<strong>Well Done!</strong> ${quizData.explanation}`;
+      } else {
+        status.textContent = 'Try Again';
+        status.className = 'text-xs font-mono font-bold text-rose-700';
+        feedback.className = 'mt-3 text-xs sm:text-sm p-3 rounded-xl bg-rose-50 border border-rose-300 text-rose-950 font-medium';
+        feedback.innerHTML = `<strong>Revision Tip:</strong> Not quite. ${quizData.explanation}`;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 2: COMPARATOR CONTROLLER
+    // -------------------------------------------------------------
+    function setCompareFocus(mode) {
+      currentCompareFocus = mode;
+      document.querySelectorAll('.compare-filter-btn').forEach(b => {
+        b.className = 'compare-filter-btn px-3 py-1.5 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900';
+      });
+      const activeBtn = document.getElementById(`btn-focus-${mode}`);
+      if (activeBtn) {
+        activeBtn.className = 'compare-filter-btn px-3 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-900 shadow-xs';
+      }
+
+      if (mode === 'military') {
+        document.querySelectorAll('.comp-node-military').forEach(el => el.classList.add('ring-2', 'ring-amber-400'));
+        document.querySelectorAll('.comp-node-outcome').forEach(el => el.classList.remove('ring-2', 'ring-amber-400'));
+      } else if (mode === 'outcome') {
+        document.querySelectorAll('.comp-node-outcome').forEach(el => el.classList.add('ring-2', 'ring-amber-400'));
+        document.querySelectorAll('.comp-node-military').forEach(el => el.classList.remove('ring-2', 'ring-amber-400'));
+      } else {
+        document.querySelectorAll('.comp-node-military, .comp-node-outcome').forEach(el => el.classList.remove('ring-2', 'ring-amber-400'));
+      }
+    }
+
+    function simulateArmyResponse(side) {
+      const commander = document.getElementById('sim-commander');
+      const status = document.getElementById('sim-status');
+      const headline = document.getElementById('sim-headline');
+      const explanation = document.getElementById('sim-explanation');
+      const icon = document.getElementById('sim-icon');
+
+      if (side === 'left') {
+        commander.textContent = "General Wilhelm Groener & Defense Minister Gustav Noske";
+        status.textContent = "Ruthless Military Suppression";
+        status.className = "px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-red-100 text-red-800 border border-red-300";
+        headline.textContent = "\"Someone must be the bloodhound; I won't shrink from the responsibility.\"";
+        explanation.textContent = "The regular army and Freikorps cooperated eagerly. They deployed heavy artillery, machine guns, and carried out extrajudicial killings against left-wing insurgents in Berlin and Munich.";
+        icon.className = "w-7 h-7 text-red-600";
+        icon.setAttribute('data-lucide', 'flame');
+      } else {
+        commander.textContent = "General Hans von Seeckt (Head of the Truppenamt)";
+        status.textContent = "Total Insubordination / Refusal";
+        status.className = "px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-sky-100 text-sky-800 border border-sky-300";
+        headline.textContent = "\"Reichswehr does not fire upon Reichswehr!\"";
+        explanation.textContent = "When ordered by President Ebert and Minister Noske to defend Berlin against the Erhardt Brigade, von Seeckt flatly refused. The army demonstrated that its loyalty lay with its monarchist peers, not with the democratic republic.";
+        icon.className = "w-7 h-7 text-sky-700";
+        icon.setAttribute('data-lucide', 'shield-x');
+      }
+      lucide.createIcons();
+    }
+
+    const EXAM_STEMS = [
+      "\"The Kapp Putsch posed a vastly more dangerous threat than the Spartacist Uprising because whereas the Spartacists were easily crushed by the state's military proxies, the Kapp Putsch revealed that the Reichswehr was an autonomous 'state within a state' that refused to protect its elected government.\"",
+      "\"While the Spartacist Uprising represented a violent ideological shock, it was disorganized and lacked military weapons; by contrast, the Kapp Putsch mobilized 5,000 battle-hardened Freikorps soldiers equipped with heavy arms and swastika insignia.\"",
+      "\"A senior examiner rewards students who note that the Spartacists fractured the Left permanently, while the Kapp Putsch exposed the complete absence of judicial and military loyalty to the Weimar Constitution.\"",
+      "\"Crucially, the Ebert government had to flee its own capital during the Kapp Putsch and relied on a civilian general strike to survive, demonstrating that the republic’s institutional defenses were completely compromised.\""
+    ];
+    let stemIndex = 0;
+    function generateExamStem() {
+      stemIndex = (stemIndex + 1) % EXAM_STEMS.length;
+      document.getElementById('exam-stem-display').textContent = EXAM_STEMS[stemIndex];
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 3: EVIDENCE VAULT & DOLCHSTOẞ ANATOMY
+    // -------------------------------------------------------------
+    function toggleDataView(view) {
+      const stats = document.getElementById('container-judiciary-stats');
+      const dolch = document.getElementById('container-dolchstoss-anatomy');
+      const btnMurders = document.getElementById('btn-view-murders');
+      const btnDolch = document.getElementById('btn-view-dolchstoss');
+
+      if (view === 'murders') {
+        stats.classList.remove('hidden');
+        dolch.classList.add('hidden');
+        btnMurders.className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-900 shadow-xs';
+        btnDolch.className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+      } else {
+        stats.classList.add('hidden');
+        dolch.classList.remove('hidden');
+        btnDolch.className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-amber-100 border border-amber-300 text-amber-900 shadow-xs';
+        btnMurders.className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+        selectDolchstossStage(1);
+      }
+    }
+
+    function selectDolchstossStage(stageNum) {
+      document.querySelectorAll('.dolch-btn').forEach((btn, idx) => {
+        if (idx + 1 === stageNum) {
+          btn.className = 'dolch-btn text-left p-4 rounded-xl bg-amber-50 border-2 border-amber-500 shadow-xs transition-all';
+        } else {
+          btn.className = 'dolch-btn text-left p-4 rounded-xl bg-white border border-slate-300 hover:border-slate-400 transition-all';
+        }
+      });
+
+      const detail = DOLCHSTOSS_STAGES[stageNum];
+      document.getElementById('dolchstoss-stage-detail').innerHTML = `
+        <h4 class="text-base sm:text-lg font-bold text-amber-900 font-editorial mb-2">${detail.title}</h4>
+        <p class="text-slate-800 leading-relaxed font-medium">${detail.text}</p>
+      `;
+    }
+
+    function selectSource(sourceKey) {
+      currentSourceId = sourceKey;
+      document.querySelectorAll('.src-tab-btn').forEach(b => {
+        b.className = 'src-tab-btn px-3 py-1 text-xs font-bold font-mono rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200';
+      });
+      const activeBtn = document.getElementById(`btn-${sourceKey.toLowerCase()}`);
+      if (activeBtn) {
+        activeBtn.className = 'src-tab-btn px-3 py-1 text-xs font-bold font-mono rounded-lg bg-amber-600 text-white shadow-2xs';
+      }
+
+      const src = SOURCES_DATA[sourceKey];
+      document.getElementById('source-extract-text').textContent = src.text;
+      document.getElementById('source-provenance').textContent = src.provenance;
+      document.getElementById('source-exam-prompt').textContent = src.prompt;
+      document.getElementById('source-examiner-answer').textContent = src.explanation;
+      document.getElementById('source-examiner-answer').classList.add('hidden');
+      document.getElementById('src-explain-toggle-text').textContent = "Show Senior Examiner Breakdown";
+      lucide.createIcons();
+    }
+
+    function toggleSourceExplanation() {
+      const box = document.getElementById('source-examiner-answer');
+      const text = document.getElementById('src-explain-toggle-text');
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        text.textContent = "Hide Examiner Breakdown";
+      } else {
+        box.classList.add('hidden');
+        text.textContent = "Show Senior Examiner Breakdown";
+      }
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 4: EXAM LAB & BALANCE SCALE
+    // -------------------------------------------------------------
+    function switchExamQuestion(qKey) {
+      document.getElementById('view-exam-10').classList.add('hidden');
+      document.getElementById('view-exam-6').classList.add('hidden');
+      document.getElementById('view-exam-4').classList.add('hidden');
+
+      document.getElementById('btn-q-10').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+      document.getElementById('btn-q-6').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+      document.getElementById('btn-q-4').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+
+      if (qKey === 'q10') {
+        document.getElementById('view-exam-10').classList.remove('hidden');
+        document.getElementById('btn-q-10').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-rose-100 border border-rose-300 text-rose-900 shadow-xs';
+      } else if (qKey === 'q6') {
+        document.getElementById('view-exam-6').classList.remove('hidden');
+        document.getElementById('btn-q-6').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-amber-100 border border-amber-300 text-amber-900 shadow-xs';
+      } else {
+        document.getElementById('view-exam-4').classList.remove('hidden');
+        document.getElementById('btn-q-4').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-900 shadow-xs';
+      }
+      lucide.createIcons();
+    }
+
+    function renderEvidenceCards() {
+      const container = document.getElementById('evidence-cards-container');
+      container.innerHTML = '';
+
+      EVIDENCE_CARDS.forEach(card => {
+        const placed = balanceState.placedCards[card.id];
+        const div = document.createElement('div');
+        div.className = `p-4 rounded-xl border text-sm transition-all relative ${
+          placed === 'doomed'
+            ? 'bg-red-50 border-2 border-red-500 shadow-xs'
+            : placed === 'resilient'
+            ? 'bg-sky-50 border-2 border-sky-500 shadow-xs'
+            : 'bg-white border-slate-200 hover:border-slate-300'
+        }`;
+
+        div.innerHTML = `
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-slate-900 font-editorial text-sm sm:text-base">${card.title}</span>
+            <span class="text-[11px] font-mono font-bold uppercase px-2 py-0.5 rounded-full ${
+              card.side === 'doomed' ? 'bg-red-100 text-red-800' : 'bg-sky-100 text-sky-800'
+            }">${card.side === 'doomed' ? 'Doomed' : 'Resilient'}</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">${card.simple}</p>
+          <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+            <button onclick="toggleCardPlacement('${card.id}', 'doomed')" class="flex-1 py-1.5 px-2 rounded-lg text-xs font-mono font-bold transition-colors ${
+              placed === 'doomed' ? 'bg-red-600 text-white' : 'bg-slate-100 text-red-700 hover:bg-red-100'
+            }">+ Doomed</button>
+            <button onclick="toggleCardPlacement('${card.id}', 'resilient')" class="flex-1 py-1.5 px-2 rounded-lg text-xs font-mono font-bold transition-colors ${
+              placed === 'resilient' ? 'bg-sky-600 text-white' : 'bg-slate-100 text-sky-700 hover:bg-sky-100'
+            }">+ Resilient</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function toggleCardPlacement(cardId, side) {
+      if (balanceState.placedCards[cardId] === side) {
+        delete balanceState.placedCards[cardId];
+      } else {
+        balanceState.placedCards[cardId] = side;
+      }
+      recalculateBalance();
+      renderEvidenceCards();
+      updateModelParagraph();
+    }
+
+    function resetScale() {
+      balanceState.placedCards = {};
+      recalculateBalance();
+      renderEvidenceCards();
+      updateModelParagraph();
+    }
+
+    function recalculateBalance() {
+      let doomed = 0;
+      let resilient = 0;
+      Object.values(balanceState.placedCards).forEach(val => {
+        if (val === 'doomed') doomed++;
+        if (val === 'resilient') resilient++;
+      });
+
+      balanceState.doomedCount = doomed;
+      balanceState.resilientCount = resilient;
+
+      document.getElementById('tally-doomed').textContent = doomed;
+      document.getElementById('tally-resilient').textContent = resilient;
+
+      const diff = doomed - resilient;
+      const angle = Math.max(-16, Math.min(16, diff * 4));
+      document.getElementById('scale-beam').style.transform = `rotate(${angle}deg)`;
+    }
+
+    function updateModelParagraph() {
+      const box = document.getElementById('dynamic-model-text');
+      const doomed = balanceState.doomedCount;
+      const resilient = balanceState.resilientCount;
+
+      if (doomed === 0 && resilient === 0) {
+        box.innerHTML = `
+          <p class="italic text-slate-500">Sort cards onto the scale to unlock the Level 5 conclusion framework. Cambridge examiners reward sustained judgment that weighs short-term success against long-term problems.</p>
+        `;
+        return;
+      }
+
+      let conclusionThesis = "";
+      if (doomed > resilient) {
+        conclusionThesis = "In conclusion, although the Weimar Republic demonstrated tactical resilience between 1918 and 1920 by surviving simultaneous armed rebellions, it was fundamentally doomed in the long term because it preserved the traditional power structures that actively despised democracy. By relying on the Ebert-Groener Pact and unpunished Freikorps paramilitaries, the republic forged a Faustian bargain with its enemies. The army's insubordination during the Kapp Putsch and the judiciary's protection of right-wing assassins proved that the state's institutional apparatus remained an unrepentant imperial enclave waiting for an opportunity to dismantle parliamentary democracy.";
+      } else if (resilient > doomed) {
+        conclusionThesis = "In conclusion, it is inaccurate to claim the Weimar Republic was doomed from its very beginning. Between 1918 and 1920, the republic proved remarkably resilient in the face of near-impossible odds. Despite food blockades, demobilizing millions of defeated soldiers, and armed insurgencies from both left and right, the democratic government created Europe's most progressive constitution and retained the loyalty of the working class. The spontaneous defeat of the Kapp Putsch through a general strike proved that when democracy was genuinely endangered, the popular masses possessed the collective power to protect the republic without firing a shot.";
+      } else {
+        conclusionThesis = "In conclusion, evaluating whether the Weimar Republic was 'doomed from the start' requires distinguishing between short-term resilience and long-term structural vulnerability. In the short term (1918–1920), the republic was not doomed: Friedrich Ebert successfully maintained public order, demobilized the imperial army, and established a functioning constitutional state supported by a massive working-class strike during the Kapp Putsch. However, the price of this survival—sacrificing judicial reform, alienating the political left, and leaving the Reichswehr as an autonomous 'state within a state'—meant that while the republic survived its birth, its structural foundations remained fatally compromised.";
+      }
+
+      box.innerHTML = `
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-amber-900 font-mono text-xs font-bold uppercase">
+            <span>Sustained Examiner Judgment (AO2 Level 5):</span>
+            <span class="text-slate-400">·</span>
+            <span>Balanced Weighting (${doomed} Doomed vs ${resilient} Resilient)</span>
+          </div>
+          <p class="leading-relaxed text-slate-800">${conclusionThesis}</p>
+        </div>
+      `;
+    }
+
+    function copyModelAnswer() {
+      const text = document.getElementById('dynamic-model-text').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btnText = document.getElementById('copy-btn-text');
+        btnText.textContent = "Copied!";
+        setTimeout(() => { btnText.textContent = "Copy Paragraph"; }, 2000);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // GLOSSARY & EXAM GUIDE MODALS
+    // -------------------------------------------------------------
+    function toggleGlossaryModal() {
+      const modal = document.getElementById('modal-glossary');
+      modal.classList.toggle('hidden');
+      lucide.createIcons();
+    }
+
+    function toggleExamGuideModal() {
+      const modal = document.getElementById('modal-exam-guide');
+      modal.classList.toggle('hidden');
+      lucide.createIcons();
+    }
+
+    function renderGlossary(filter = '') {
+      const container = document.getElementById('glossary-items-container');
+      container.innerHTML = '';
+
+      const items = GLOSSARY_TERMS.filter(g => 
+        g.term.toLowerCase().includes(filter.toLowerCase()) || 
+        g.def.toLowerCase().includes(filter.toLowerCase()) ||
+        g.simple.toLowerCase().includes(filter.toLowerCase())
+      );
+
+      if (items.length === 0) {
+        container.innerHTML = '<p class="text-slate-500 italic p-4 text-center">No matching historical terms found.</p>';
+        return;
+      }
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5';
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-amber-900 font-editorial text-base">${item.term}</span>
+            <button onclick="speakText('${item.term}. In simple terms: ${item.simple}. Full definition: ${item.def}')" class="text-xs font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              <span>Listen</span>
+            </button>
+          </div>
+          <div class="text-xs font-medium text-amber-950 bg-amber-100/70 p-2 rounded-lg border border-amber-200">
+            <strong>Simple Summary:</strong> ${item.simple}
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${item.def}</p>
+        `;
+        container.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    function filterGlossary() {
+      const q = document.getElementById('glossary-search').value;
+      renderGlossary(q);
+    }
+
+    function lookupGlossary(term) {
+      toggleGlossaryModal();
+      document.getElementById('glossary-search').value = term;
+      renderGlossary(term);
+    }
+  </script>
+</body>
+</html>
