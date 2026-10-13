@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-100 text-slate-800">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weimar Constitution & 1923 Year of Crisis (Units 1.3–1.4) | Cambridge IGCSE History</title>
+  <meta name="description" content="Differentiated interactive laboratory for Cambridge IGCSE History (0470/0977) Depth Study B: Germany 1918–1945. Units 1.3 The Constitution and 1.4 The 1923 Year of Crisis.">
+  <meta property="og:title" content="Weimar Constitution & 1923 Crisis Lab">
+  <meta property="og:description" content="Accessible interactive laboratory covering the Weimar Constitution, Proportional Representation, Article 48, Ruhr invasion, Hyperinflation, and the Munich Putsch.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons via unpkg -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Lexend (Dyslexia-optimized), Plus Jakarta Sans, Fraunces -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Lexend:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            dyslexic: ['Lexend', 'Comic Sans MS', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            leftist: {
+              50: '#FEF2F2',
+              100: '#FEE2E2',
+              500: '#EF4444',
+              700: '#B91C1C',
+              800: '#991B1B',
+            },
+            rightist: {
+              50: '#F0F9FF',
+              100: '#E0F2FE',
+              500: '#0284C7',
+              700: '#0369A1',
+              800: '#075985',
+            },
+            weimar: {
+              50: '#FFFBEB',
+              100: '#FEF3C7',
+              500: '#F59E0B',
+              600: '#D97706',
+              700: '#B45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    
+    body.dyslexia-font {
+      font-family: 'Lexend', sans-serif !important;
+      letter-spacing: 0.03em;
+      word-spacing: 0.08em;
+      line-height: 1.75 !important;
+    }
+
+    body.text-lg-mode {
+      font-size: 1.125rem;
+    }
+    body.text-lg-mode p, body.text-lg-mode span, body.text-lg-mode button {
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+    body.dyslexia-font h1, 
+    body.dyslexia-font h2, 
+    body.dyslexia-font h3, 
+    body.dyslexia-font .font-editorial {
+      font-family: 'Lexend', sans-serif !important;
+      font-weight: 700;
+    }
+
+    .glossary-term {
+      border-bottom: 2px dotted #d97706;
+      cursor: help;
+      font-weight: 600;
+      color: #92400e;
+      background-color: #fef3c7;
+      padding: 0 3px;
+      border-radius: 3px;
+      transition: all 0.2s;
+    }
+    .glossary-term:hover {
+      background-color: #fde68a;
+      color: #78350f;
+    }
+
+    #scale-beam {
+      transform-origin: center center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media print {
+      header, nav, #accessibility-bar, .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 flex flex-col selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- TOP UNIT SWITCHER BANNER -->
+  <aside aria-label="Unit Switcher" class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span class="font-bold text-amber-300">Cambridge IGCSE Depth Study B (Germany 1918–1945)</span>
+        <span class="text-slate-400 hidden sm:inline">· You are currently in Part 2: Units 1.3 &amp; 1.4</span>
+      </div>
+      <a href="index.html" class="inline-flex items-center gap-1 font-bold text-amber-400 hover:text-amber-300 underline">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+        <span>Switch to Part 1: Units 1.1 &amp; 1.2 (Birth of Republic &amp; Early Threats)</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- TOP HEADER -->
+  <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Specimen Badge -->
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold shadow-sm">
+          <i data-lucide="scroll" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-lg font-bold tracking-tight text-slate-900 font-editorial">Weimar 1.3 &amp; 1.4 Lab</h1>
+            <span class="text-xs font-mono font-semibold text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded-full">Constitution &amp; 1923</span>
+          </div>
+          <p class="text-xs text-slate-500 hidden sm:block">Proportional Representation · Article 48 · Ruhr Occupation · Hyperinflation · Munich Putsch</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto py-1">
+        <button onclick="switchTab('constitution')" id="tab-btn-constitution" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-amber-900 bg-amber-50 border border-amber-200 shadow-xs flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="layout-grid" class="w-4 h-4 text-amber-600"></i>
+          <span>1. The Constitution</span>
+        </button>
+        <button onclick="switchTab('ruhr-passive')" id="tab-btn-ruhr-passive" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="factory" class="w-4 h-4 text-sky-600"></i>
+          <span>2. Ruhr Occupation</span>
+        </button>
+        <button onclick="switchTab('hyperinflation')" id="tab-btn-hyperinflation" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="banknote" class="w-4 h-4 text-emerald-600"></i>
+          <span>3. Hyperinflation</span>
+        </button>
+        <button onclick="switchTab('munich-putsch')" id="tab-btn-munich-putsch" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-rose-600"></i>
+          <span>4. Munich Putsch</span>
+        </button>
+        <button onclick="switchTab('exam-lab')" id="tab-btn-exam-lab" class="nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="award" class="w-4 h-4 text-amber-600"></i>
+          <span>5. Exam Lab</span>
+        </button>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button onclick="toggleGlossaryModal()" class="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors flex items-center gap-1.5" title="Open glossary">
+          <i data-lucide="book-open" class="w-4 h-4 text-amber-600"></i>
+          <span class="hidden md:inline">Glossary</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ACCESSIBILITY & READABILITY TOOLBAR -->
+  <div id="accessibility-bar" class="bg-amber-50/80 border-b border-amber-200/80 px-4 py-2 text-xs text-slate-700 transition-all">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Learning Mode Toggle -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="font-bold text-amber-950 flex items-center gap-1">
+          <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-amber-700"></i>
+          <span>Differentiation Level:</span>
+        </span>
+        <div class="inline-flex rounded-lg bg-white border border-amber-300 p-0.5 shadow-2xs">
+          <button onclick="setLearningMode('core')" id="mode-btn-core" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-amber-600 text-white shadow-xs">
+            Core / Foundation (Plain English)
+          </button>
+          <button onclick="setLearningMode('higher')" id="mode-btn-higher" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-600 hover:text-slate-900">
+            Higher / Senior Examiner (AO1 + AO2)
+          </button>
+        </div>
+      </div>
+
+      <!-- Dyslexia & Audio Read-Aloud Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="toggleDyslexiaFont()" id="btn-dyslexia" class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-300 hover:bg-slate-50 font-medium text-slate-700 transition-colors shadow-2xs">
+          <i data-lucide="type" class="w-3.5 h-3.5 text-amber-700"></i>
+          <span id="dyslexia-btn-label">Dyslexia Font: Off</span>
+        </button>
+
+        <div class="inline-flex rounded-md bg-white border border-slate-300 p-0.5 shadow-2xs">
+          <button onclick="setTextSize('normal')" id="btn-size-normal" class="px-2 py-0.5 font-bold text-slate-900 bg-slate-200 rounded text-xs">A</button>
+          <button onclick="setTextSize('large')" id="btn-size-large" class="px-2 py-0.5 font-bold text-slate-600 hover:text-slate-900 rounded text-sm">A+</button>
+        </div>
+
+        <button onclick="toggleAudioReading()" id="btn-audio-narrator" class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-slate-300 hover:bg-slate-50 font-medium text-slate-700 transition-colors shadow-2xs">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span id="audio-btn-label">Read Aloud</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN VIEWPORT CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
+
+    <!-- ============================================================== -->
+    <!-- MODULE 1: THE WEIMAR CONSTITUTION (STRUCTURE, PR & ARTICLE 48) -->
+    <!-- ============================================================== -->
+    <div id="module-constitution" class="module-section space-y-6">
+      
+      <!-- Module Intro Header -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-amber-800 uppercase tracking-wider mb-1">
+              <span>Unit 1.3 · Constitutional Engineering &amp; Fatal Flaws</span>
+              <span>·</span>
+              <span>Signed 11 August 1919</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">The Weimar Constitution: Strengths &amp; Fatal Flaws</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              Pitted as the most democratic constitution in the world, Weimar gave all men and women the vote. Yet, its mathematical election system (<span class="glossary-term" onclick="lookupGlossary('Proportional Representation')">Proportional Representation</span>) and emergency loophole (<span class="glossary-term" onclick="lookupGlossary('Article 48')">Article 48</span>) created chronic instability.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="readAloudSection('const-summary')" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="volume-2" class="w-4 h-4 text-blue-600"></i>
+              <span>Listen to Summary</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Plain-English Summary Box -->
+      <div class="bg-amber-50/80 border border-amber-200 rounded-2xl p-5" id="const-summary">
+        <div class="flex items-center gap-2 text-amber-900 font-bold text-base mb-1">
+          <i data-lucide="sparkles" class="w-5 h-5 text-amber-700"></i>
+          <span>In a Nutshell (The 3 Core Ideas)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3 text-sm text-slate-800">
+          <div class="bg-white p-4 rounded-xl border border-amber-200">
+            <strong class="text-amber-900 block mb-1">1. Great Democratic Freedoms:</strong>
+            All men and women over 20 could vote. A Bill of Rights protected free speech, religious liberty, and a free press.
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-amber-200">
+            <strong class="text-red-700 block mb-1">2. PR Weakened Parliament:</strong>
+            Parties got seats matching their exact % of votes. This caused small extremist parties to flourish and led to 25 weak coalition governments.
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-amber-200">
+            <strong class="text-slate-900 block mb-1">3. Article 48 Loophole:</strong>
+            The President could rule by emergency decree without the Reichstag. Ebert used it 136 times; later it became a tool for legal dictatorship.
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Constitutional Architecture Map -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 font-editorial">Interactive Constitutional Flowchart</h3>
+            <p class="text-xs sm:text-sm text-slate-500">Click on any institution to understand its role and constitutional power:</p>
+          </div>
+          <span class="text-xs font-mono font-bold text-slate-400">Click a box to inspect</span>
+        </div>
+
+        <!-- Visual Flowchart Boxes -->
+        <div class="space-y-6 max-w-4xl mx-auto">
+          
+          <!-- Top: The Electorate -->
+          <div onclick="inspectConstElement('electorate')" class="cursor-pointer p-4 rounded-2xl bg-amber-50 border-2 border-amber-400 hover:bg-amber-100 transition-all text-center shadow-xs">
+            <div class="text-xs font-mono uppercase font-bold text-amber-800">Foundation of Democracy</div>
+            <div class="text-lg font-bold text-slate-900 font-editorial">THE GERMAN ELECTORATE (All Men &amp; Women Over 20)</div>
+            <p class="text-xs text-slate-600 mt-1">Voted every 7 years for the President · Voted every 4 years for the Reichstag</p>
+          </div>
+
+          <!-- Split into President & Reichstag -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+            
+            <!-- Left: The President -->
+            <div onclick="inspectConstElement('president')" class="cursor-pointer p-5 rounded-2xl bg-sky-50 border-2 border-sky-400 hover:bg-sky-100 transition-all space-y-2 shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-sky-800 uppercase">Head of State (Elected 7 Yrs)</span>
+                <i data-lucide="crown" class="w-4 h-4 text-sky-700"></i>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900 font-editorial">THE PRESIDENT</h4>
+              <ul class="text-xs text-slate-700 space-y-1 list-disc list-inside">
+                <li>Supreme Commander of the Armed Forces</li>
+                <li>Appoints and dismisses the Chancellor</li>
+                <li>Can dissolve the Reichstag and call new elections</li>
+                <li><strong class="text-red-700">Article 48:</strong> Can suspend civil rights in an emergency</li>
+              </ul>
+            </div>
+
+            <!-- Right: The Reichstag -->
+            <div onclick="inspectConstElement('reichstag')" class="cursor-pointer p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-400 hover:bg-emerald-100 transition-all space-y-2 shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-emerald-800 uppercase">Parliament (Elected 4 Yrs)</span>
+                <i data-lucide="landmark" class="w-4 h-4 text-emerald-700"></i>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900 font-editorial">THE REICHSTAG</h4>
+              <ul class="text-xs text-slate-700 space-y-1 list-disc list-inside">
+                <li>Made all national laws and voted on budgets</li>
+                <li>Elected via <strong class="text-emerald-900">Proportional Representation</strong></li>
+                <li>Chancellor needed majority support to pass laws</li>
+                <li>Included regional representation from 18 German states (Reichsrat)</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Connecting to Chancellor -->
+          <div onclick="inspectConstElement('chancellor')" class="cursor-pointer p-5 rounded-2xl bg-slate-100 border-2 border-slate-400 hover:bg-slate-200 transition-all text-center max-w-xl mx-auto shadow-xs">
+            <div class="text-xs font-mono uppercase font-bold text-slate-600">Head of Government</div>
+            <div class="text-lg font-bold text-slate-900 font-editorial">THE CHANCELLOR &amp; CABINET</div>
+            <p class="text-xs text-slate-600 mt-1">Appointed by the President, but had to resign if the Reichstag voted no confidence.</p>
+          </div>
+
+        </div>
+
+        <!-- Detail Drawer / Inspector Box -->
+        <div id="const-detail-box" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-800 leading-relaxed">
+          <div class="font-bold text-amber-900 text-base font-editorial mb-1" id="const-detail-title">
+            Select an element above to inspect
+          </div>
+          <p id="const-detail-text">
+            Click on any branch of the Weimar government in the diagram above to learn how power flowed, where checks and balances existed, and why fatal constitutional loopholes made dictatorship possible.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- PROPORTIONAL REPRESENTATION & COALITION COLLAPSE SIMULATOR -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-xs font-mono uppercase font-bold text-red-700">Interactive Electoral Lab</span>
+            <h3 class="text-xl font-bold text-slate-900 font-editorial">Why Did Proportional Representation Paralyze Weimar?</h3>
+            <p class="text-sm text-slate-600">
+              Under PR, a party getting 2% of the vote won 2% of Reichstag seats. See why no party ever reached a 50% majority:
+            </p>
+          </div>
+          <button onclick="simulateNewElection()" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-amber-600 hover:bg-amber-700 text-white shadow-2xs">
+            Simulate Reichstag Election
+          </button>
+        </div>
+
+        <!-- Visual Party Seat Distribution Bar -->
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs font-mono font-bold text-slate-600">
+            <span>Seat Distribution (Total 459 Seats):</span>
+            <span id="majority-marker" class="text-red-700">50% Majority Threshold = 230 Seats</span>
+          </div>
+
+          <div class="w-full h-8 rounded-xl bg-slate-200 overflow-hidden flex shadow-inner" id="election-bar-container">
+            <!-- Dynamically populated via JS -->
+          </div>
+
+          <div class="flex flex-wrap gap-3 text-xs pt-1" id="election-legend">
+            <!-- Legend items injected via JS -->
+          </div>
+        </div>
+
+        <!-- Coalition Status Card -->
+        <div id="coalition-result-box" class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-sm text-slate-800 space-y-1">
+          <strong class="text-amber-900 font-bold block">Coalition Result: 3-Party Compromise (SPD + Center + DDP)</strong>
+          <p>Because no party gained over 50% of the seats, moderate parties had to form fragile multi-party coalitions. When these parties argued over welfare or taxes, the government collapsed. Over 14 years, Weimar had <strong class="text-red-700">25 separate governments</strong>, causing ordinary Germans to lose faith in democracy.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 2: RUHR OCCUPATION & PASSIVE RESISTANCE (JAN 1923) -->
+    <!-- ============================================================== -->
+    <div id="module-ruhr-passive" class="module-section hidden space-y-6">
+      
+      <!-- Module Header -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-sky-800 uppercase tracking-wider mb-1">
+              <span>Unit 1.4 · The 1923 Year of Crisis (Part 1)</span>
+              <span>·</span>
+              <span>January 1923 Invasion</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">The Ruhr Occupation &amp; Passive Resistance</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              When Germany defaulted on timber and coal reparations, French and Belgian troops invaded the Ruhr industrial valley. German Chancellor Wilhelm Cuno ordered a regional general strike called <span class="glossary-term" onclick="lookupGlossary('Passive Resistance')">Passive Resistance</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Step Interactive Domino Chain -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-6">
+        <h3 class="text-xl font-bold text-slate-900 font-editorial">The Domino Chain of the 1923 Crisis</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-amber-800 uppercase">Step 01: Default</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">Reparations Default</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Germany fell behind on delivering coal and telephone poles to France. The total reparations bill was £6.6 billion (132 billion gold marks).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-sky-800 uppercase">Step 02: Invasion</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">French Troops Enter</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              French PM Raymond Poincaré sent 60,000 troops to occupy the Ruhr to seize coal and steel directly from German factories as payment in kind.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-amber-800 uppercase">Step 03: Strike</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">Passive Resistance</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              German workers refused to mine coal or run trains. French soldiers shot dead 130 strikers and expelled 100,000 protesters.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-red-50 border border-red-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-red-800 uppercase">Step 04: Collapse</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">Printing Presses Roll</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              With no tax income from the Ruhr, the government printed paper money to pay the striking workers' wages, triggering catastrophic hyperinflation.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Passive Resistance Cost Simulator -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900 text-sm font-editorial">The Economic Disaster of Passive Resistance:</span>
+            <span class="text-xs font-mono font-bold text-red-700">Financial Hemorrhage</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-700">
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-red-700 block mb-1">Tax Revenue Lost:</strong>
+              The Ruhr produced 80% of Germany’s coal and steel. Tax revenue stopped completely.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-red-700 block mb-1">Paying 2 Million Strikers:</strong>
+              The government promised to pay full wages to workers on strike despite having zero income.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-red-700 block mb-1">Importing Foreign Coal:</strong>
+              Germany had to use scarce foreign currency to buy coal from Britain to keep lights on.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 3: HYPERINFLATION LABORATORY & WINNERS VS. LOSERS -->
+    <!-- ============================================================== -->
+    <div id="module-hyperinflation" class="module-section hidden space-y-6">
+      
+      <!-- Module Header -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-emerald-800 uppercase tracking-wider mb-1">
+              <span>Unit 1.4 · The 1923 Year of Crisis (Part 2)</span>
+              <span>·</span>
+              <span>Currency Collapse &amp; Social Trauma</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">The Hyperinflation Crisis &amp; The Social Fallout</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              When paper money was printed without real economic goods backing it, the German Mark lost all value. Prices rose by the hour, wiping out the middle class and creating deep social trauma.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exchange Rate Tracker & Price Shock -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-5">
+        <h3 class="text-xl font-bold text-slate-900 font-editorial">The 1923 Mark to 1 US Dollar Exchange Rate</h3>
+
+        <!-- Interactive 3-Date Comparison Slider/Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          
+          <div onclick="selectHyperStage('jan')" id="hyper-btn-jan" class="cursor-pointer p-5 rounded-2xl bg-slate-50 border-2 border-slate-300 hover:border-amber-400 transition-all space-y-1">
+            <span class="text-xs font-mono uppercase font-bold text-slate-500">January 1923</span>
+            <div class="text-2xl font-bold font-mono text-slate-900">$1 = 17,972 Marks</div>
+            <p class="text-xs text-slate-500">Loaf of bread: ~250 Marks</p>
+          </div>
+
+          <div onclick="selectHyperStage('jul')" id="hyper-btn-jul" class="cursor-pointer p-5 rounded-2xl bg-slate-50 border-2 border-slate-300 hover:border-amber-400 transition-all space-y-1">
+            <span class="text-xs font-mono uppercase font-bold text-slate-500">July 1923</span>
+            <div class="text-2xl font-bold font-mono text-amber-700">$1 = 353,412 Marks</div>
+            <p class="text-xs text-slate-500">Loaf of bread: ~3,400 Marks</p>
+          </div>
+
+          <div onclick="selectHyperStage('nov')" id="hyper-btn-nov" class="cursor-pointer p-5 rounded-2xl bg-amber-50 border-2 border-amber-500 transition-all space-y-1 shadow-xs">
+            <span class="text-xs font-mono uppercase font-bold text-red-700">November 1923</span>
+            <div class="text-2xl font-bold font-mono text-red-700">$1 = 4.2 Trillion Marks!</div>
+            <p class="text-xs text-slate-500">Loaf of bread: 201 Billion Marks!</p>
+          </div>
+
+        </div>
+
+        <!-- Real-Life Everyday Reality Card -->
+        <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2">
+          <strong class="text-amber-950 font-bold text-base block font-editorial">What Did Hyperinflation Look Like in Daily Life?</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-slate-800">
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold block mb-1">Wheelbarrows for Shopping:</span>
+              People carried cash in laundry baskets and wheelbarrows just to buy butter and milk.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold block mb-1">Paid Twice Daily:</span>
+              Workers sprinted to shops during lunch because prices doubled by dinnertime.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold block mb-1">Return to Barter:</span>
+              Shopkeepers refused paper money; people traded coal for sausages or shoes for eggs.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <span class="font-bold block mb-1">Fuel &amp; Wallpaper:</span>
+              Banknotes were burned in stoves for heat because burning cash was cheaper than buying wood.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WINNERS VS LOSERS INTERACTIVE MATRIX -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-5">
+        <h3 class="text-xl font-bold text-slate-900 font-editorial">Winners vs. Losers of Hyperinflation</h3>
+        <p class="text-sm text-slate-600">
+          Hyperinflation did not hurt everyone equally. Examine who gained and who was ruined:
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Winners (Sky Blue) -->
+          <div class="p-5 rounded-2xl bg-sky-50 border-2 border-sky-200 space-y-3">
+            <div class="flex items-center justify-between border-b border-sky-200 pb-2">
+              <span class="font-bold text-sky-950 text-base">THE WINNERS</span>
+              <span class="text-xs font-mono font-bold text-sky-800 bg-sky-100 px-2.5 py-0.5 rounded-full">Profited from Crisis</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-700 space-y-2">
+              <li class="bg-white p-3 rounded-xl border border-sky-200">
+                <strong class="text-sky-900 block font-bold">Industrialists &amp; Big Business (e.g. Hugo Stinnes):</strong>
+                Borrowed millions from banks and repaid loans with worthless marks; bought out bankrupt competitors for pennies.
+              </li>
+              <li class="bg-white p-3 rounded-xl border border-sky-200">
+                <strong class="text-sky-900 block font-bold">Mortgage Holders &amp; Debtors:</strong>
+                Homeowners wiped out 30-year house mortgages with what amounted to the price of a box of matches.
+              </li>
+              <li class="bg-white p-3 rounded-xl border border-sky-200">
+                <strong class="text-sky-900 block font-bold">Foreign Tourists &amp; Diplomats:</strong>
+                Exchanged a few US dollars or British pounds for billions of marks and lived in luxury hotels.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Losers (Crimson) -->
+          <div class="p-5 rounded-2xl bg-red-50 border-2 border-red-200 space-y-3">
+            <div class="flex items-center justify-between border-b border-red-200 pb-2">
+              <span class="font-bold text-red-950 text-base">THE LOSERS</span>
+              <span class="text-xs font-mono font-bold text-red-800 bg-red-100 px-2.5 py-0.5 rounded-full">Devastated</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-700 space-y-2">
+              <li class="bg-white p-3 rounded-xl border border-red-200">
+                <strong class="text-red-900 block font-bold">The Middle Class (<span class="glossary-term" onclick="lookupGlossary('Mittelstand')">Mittelstand</span>):</strong>
+                Careful savers, teachers, doctors, and small shopkeepers lost their entire life savings and insurance policies overnight.
+              </li>
+              <li class="bg-white p-3 rounded-xl border border-red-200">
+                <strong class="text-red-900 block font-bold">Pensioners &amp; War Widows:</strong>
+                Fixed monthly pensions could not buy a cup of tea. Thousands faced starvation and absolute poverty.
+              </li>
+              <li class="bg-white p-3 rounded-xl border border-red-200">
+                <strong class="text-red-900 block font-bold">Ordinary Wage Earners:</strong>
+                Although wages were raised, they could not keep pace with hourly price hikes.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Cambridge Long-Term Consequence Box -->
+        <div class="p-4 rounded-xl bg-indigo-50 border border-indigo-200 text-xs sm:text-sm text-indigo-950">
+          <strong class="font-bold block mb-1">Senior Examiner Significance (AO2):</strong>
+          The real tragedy was <span class="underline font-semibold">psychological</span>. The hardworking middle class felt that playing by the rules was a sucker's game and that the democratic republic had cheated them. When the Great Depression hit in 1929, these scarred families refused to support the republic and turned to Adolf Hitler.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 4: THE MUNICH (BEER HALL) PUTSCH (NOVEMBER 1923) -->
+    <!-- ============================================================== -->
+    <div id="module-munich-putsch" class="module-section hidden space-y-6">
+      
+      <!-- Module Header -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-rose-800 uppercase tracking-wider mb-1">
+              <span>Unit 1.4 · The 1923 Year of Crisis (Part 3)</span>
+              <span>·</span>
+              <span>8–9 November 1923</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">The Munich Putsch: Tactical Fiasco to Propaganda Triumph</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              When Gustav Stresemann called off passive resistance, Adolf Hitler tried to seize power in Munich. Although the march on Munich was smashed by police, Hitler turned the trial into an enormous national victory.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chronological Story Map -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-5">
+        <h3 class="text-xl font-bold text-slate-900 font-editorial">Events of the Putsch: Step-by-Step</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-amber-800 uppercase">8 Nov 1923 · 8:30 PM</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">Bürgerbräukeller Beer Hall</h4>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Hitler and 600 armed SA storm a political meeting. Hitler fires a pistol into the ceiling and forces Bavarian leaders (Kahr, Lossow, Seisser) at gunpoint to back his revolution.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-amber-800 uppercase">Overnight · 8–9 Nov</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">Bavarian Leaders Renounce</h4>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Once allowed to leave the beer hall, Kahr and Lossow immediately alert the Munich police and military. Hitler’s surprise coup is compromised.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-red-50 border border-red-200 space-y-2">
+            <span class="text-xs font-mono font-bold text-red-800 uppercase">9 Nov 1923 · Midday</span>
+            <h4 class="font-bold text-slate-900 text-base font-editorial">The Feldherrnhalle Clash</h4>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Hitler and Ludendorff lead 2,000 Nazis into central Munich. Armed police open fire. 16 Nazis and 4 police die. Hitler dislocates his shoulder, flees in a yellow car, and is arrested 2 days later.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Why It Was a Victory for Hitler (4 Pillars) -->
+        <div class="mt-6 pt-5 border-t border-slate-200 space-y-3">
+          <h4 class="text-base font-bold text-slate-900 font-editorial">Why the Munich Putsch Became an Ultimate Success for Hitler:</h4>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs sm:text-sm text-slate-800">
+            <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
+              <strong class="text-amber-900 block font-bold mb-1">1. National Trial Platform:</strong>
+              His trial for treason was reported on the front page of every newspaper. His fiery speeches made him famous across all of Germany.
+            </div>
+            <div class="p-4 rounded-xl bg-sky-50 border border-sky-200">
+              <strong class="text-sky-900 block font-bold mb-1">2. Lenient Imperial Judge:</strong>
+              The right-wing judge gave him the minimum sentence (5 years) and let him out after only 9 months of comfortable custody in Landsberg.
+            </div>
+            <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+              <strong class="text-emerald-900 block font-bold mb-1">3. Wrote Mein Kampf:</strong>
+              In prison, Hitler dictated his political manifesto to Rudolf Hess, outlining his plans to conquer Europe and eliminate Jews.
+            </div>
+            <div class="p-4 rounded-xl bg-purple-50 border border-purple-200">
+              <strong class="text-purple-900 block font-bold mb-1">4. Shift in Strategy:</strong>
+              Hitler realized armed coups failed. He committed the Nazis to entering democratic elections to "destroy democracy from within."
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- MODULE 5: IGCSE EXAM LAB & EVALUATIVE BALANCE SCALE -->
+    <!-- ============================================================== -->
+    <div id="module-exam-lab" class="module-section hidden space-y-6">
+      
+      <!-- Exam Lab Header -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-amber-800 uppercase tracking-wider mb-1">
+              <span>Cambridge IGCSE Essay &amp; Evaluation Laboratory</span>
+              <span>·</span>
+              <span>AO1 (Recall) &amp; AO2 (Judgment)</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-editorial">Exam Lab: "Was 1923 a Complete Disaster for Weimar?"</h2>
+            <p class="text-sm sm:text-base text-slate-600 max-w-3xl mt-1.5 leading-relaxed">
+              Weigh whether the republic was fundamentally ruined in 1923, or whether its survival showed remarkable resilience under Chancellor Gustav Stresemann.
+            </p>
+          </div>
+
+          <!-- Question Switcher -->
+          <div class="flex items-center gap-2">
+            <button onclick="switchExamQuestion('q10')" id="btn-q-10" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-amber-100 border border-amber-300 text-amber-900 shadow-xs">
+              10-Mark Evaluative Scale
+            </button>
+            <button onclick="switchExamQuestion('q6')" id="btn-q-6" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700">
+              6-Mark Causation
+            </button>
+            <button onclick="switchExamQuestion('q4')" id="btn-q-4" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700">
+              4-Mark Recall
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW A: 10-MARK DYNAMIC BALANCE SCALE -->
+      <div id="view-exam-10" class="space-y-6">
+        
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm">
+          <div class="text-center max-w-xl mx-auto mb-3">
+            <span class="text-xs font-mono font-bold uppercase text-amber-800 tracking-wider">Cambridge AO2 Evaluative Scale</span>
+            <h3 class="text-2xl font-bold text-slate-900 font-editorial">The Historical Balance Scale</h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Click the cards below to tilt the balance between <strong class="text-red-700">Complete Disaster</strong> and <strong class="text-sky-700">Survived &amp; Stabilized</strong>:
+            </p>
+          </div>
+
+          <!-- Scale Graphic -->
+          <div class="relative max-w-xl mx-auto h-48 flex items-center justify-center">
+            <svg viewBox="0 0 400 180" class="w-full h-full overflow-visible">
+              <polygon points="190,170 210,170 203,70 197,70" fill="#64748b" />
+              <rect x="175" y="165" width="50" height="8" rx="2" fill="#475569" />
+              <circle cx="200" cy="70" r="7" fill="#d97706" />
+
+              <g id="scale-beam" style="transform: rotate(0deg);">
+                <line x1="60" y1="70" x2="340" y2="70" stroke="#334155" stroke-width="4.5" stroke-linecap="round" />
+                
+                <line x1="60" y1="70" x2="40" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <line x1="60" y1="70" x2="80" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <path d="M 30 120 Q 60 135 90 120 Z" fill="#ef4444" opacity="0.9" />
+
+                <line x1="340" y1="70" x2="320" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <line x1="340" y1="70" x2="360" y2="120" stroke="#94a3b8" stroke-width="2" />
+                <path d="M 310 120 Q 340 135 370 120 Z" fill="#0284c7" opacity="0.9" />
+              </g>
+
+              <text x="60" y="165" fill="#dc2626" font-size="12" font-family="Fraunces, serif" text-anchor="middle" font-weight="bold">TOTAL DISASTER</text>
+              <text x="340" y="165" fill="#0369a1" font-size="12" font-family="Fraunces, serif" text-anchor="middle" font-weight="bold">OVERCAME CRISIS</text>
+            </svg>
+          </div>
+
+          <!-- Tally -->
+          <div class="flex items-center justify-center gap-8 text-sm font-mono mt-2">
+            <div class="text-red-700 flex items-center gap-2">
+              <span class="font-bold">Disaster Arguments:</span>
+              <span id="tally-disaster" class="text-base font-bold bg-red-100 px-3 py-0.5 rounded-full border border-red-300">0</span>
+            </div>
+            <div class="text-slate-400 font-sans font-bold">vs</div>
+            <div class="text-sky-700 flex items-center gap-2">
+              <span class="font-bold">Resilience Arguments:</span>
+              <span id="tally-overcame" class="text-base font-bold bg-sky-100 px-3 py-0.5 rounded-full border border-sky-300">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evidence Cards Container -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-mono uppercase font-bold text-slate-500 tracking-wider">
+              1923 Historical Evidence Cards (Click button to sort):
+            </h4>
+            <button onclick="resetScale()" class="text-xs text-amber-700 hover:text-amber-900 font-bold underline">
+              Reset Scale
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="evidence-cards-container">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <!-- Dynamic Model Conclusion -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5 text-amber-600"></i>
+              <h4 class="text-lg font-bold text-slate-900 font-editorial">Model Evaluative Conclusion Framework (Level 5)</h4>
+            </div>
+            <button onclick="copyModelAnswer()" class="text-xs text-amber-900 hover:text-amber-950 flex items-center gap-1 bg-amber-100 px-2.5 py-1 rounded-lg font-semibold">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span id="copy-btn-text">Copy Paragraph</span>
+            </button>
+          </div>
+          <div id="dynamic-model-text" class="text-sm sm:text-base text-slate-800 leading-relaxed bg-slate-50 p-5 rounded-xl border border-slate-200">
+            <!-- Dynamically updated via JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VIEW B: 6-MARK CAUSATION -->
+      <div id="view-exam-6" class="hidden space-y-6">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-4">
+          <span class="text-xs font-mono uppercase font-bold text-amber-800">Cambridge 6-Mark Causation Explainer</span>
+          <h3 class="text-2xl font-bold text-slate-900 font-editorial">"Why did hyperinflation occur in Germany in 1923?"</h3>
+          <p class="text-sm text-slate-600">
+            To score 6/6 marks, provide two fully linked causal factors:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex items-center gap-2 text-amber-900 text-sm font-bold">
+                <span class="w-6 h-6 rounded-full bg-amber-200 border border-amber-300 flex items-center justify-center text-xs font-bold">1</span>
+                <span>Factor 1: The French Invasion of the Ruhr</span>
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                When Germany defaulted on coal reparations, French and Belgian troops occupied the Ruhr. The German government ordered passive resistance, halting coal and industrial production. Because the Ruhr generated 80% of German tax revenue, the state suffered a near-total loss of income.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex items-center gap-2 text-amber-900 text-sm font-bold">
+                <span class="w-6 h-6 rounded-full bg-amber-200 border border-amber-300 flex items-center justify-center text-xs font-bold">2</span>
+                <span>Factor 2: Printing Unbacked Paper Currency</span>
+              </div>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                To pay the wages of 2 million striking workers and cover national debts, the government printed massive volumes of paper banknotes. Because no real economic output was backing this newly printed money, the value of the mark collapsed completely, causing hourly price hyperinflation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW C: 4-MARK RECALL -->
+      <div id="view-exam-4" class="hidden space-y-6">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-4">
+          <span class="text-xs font-mono uppercase font-bold text-emerald-800">Cambridge 4-Mark Recall Explainer</span>
+          <h3 class="text-2xl font-bold text-slate-900 font-editorial">"Describe the events of the Munich Putsch in November 1923."</h3>
+          <div class="mt-4 space-y-2.5 text-sm">
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 1:</strong> On 8 November 1923, Adolf Hitler and 600 SA men stormed the Bürgerbräukeller beer hall in Munich.</span>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 2:</strong> At gunpoint, Hitler forced Bavarian state leaders (including Gustav von Kahr) to support his national revolution.</span>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 3:</strong> On 9 November, Hitler and General Ludendorff led 2,000 Nazis marching toward central Munich, but were met by armed police.</span>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0"></i>
+              <span><strong>Point 4:</strong> In a shootout at the Feldherrnhalle, 16 Nazis and 4 police officers were killed, the putsch collapsed, and Hitler was arrested.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- GLOSSARY MODAL -->
+  <div id="modal-glossary" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 font-editorial">Units 1.3–1.4 Vocabulary Glossary</h3>
+            <p class="text-xs text-slate-500">Essential terms explained in plain English and exam context</p>
+          </div>
+        </div>
+        <button onclick="toggleGlossaryModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-200 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-3 border-b border-slate-200 bg-white">
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5"></i>
+          <input type="text" id="glossary-search" oninput="filterGlossary()" placeholder="Search terms (e.g. Article 48, Ruhr, Hyperinflation)..." class="w-full pl-9 pr-3 py-1.5 text-xs sm:text-sm rounded-lg border border-slate-300 focus:outline-none focus:border-amber-500">
+        </div>
+      </div>
+
+      <div class="p-5 overflow-y-auto space-y-3 custom-scrollbar text-sm" id="glossary-items-container">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-slate-200 bg-white py-4 px-4 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>Cambridge IGCSE History Option B &amp; Depth Study B Lab · Units 1.3 &amp; 1.4</div>
+      <div class="flex items-center gap-3 text-slate-600">
+        <span>AO1 Knowledge</span>
+        <span>·</span>
+        <span>AO2 Causation &amp; Significance</span>
+        <span>·</span>
+        <a href="index.html" class="text-amber-800 font-semibold underline">Part 1 (1.1–1.2)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- JAVASCRIPT STATE ENGINE & DATA MODEL -->
+  <!-- ============================================================== -->
+  <script>
+    // -------------------------------------------------------------
+    // DATA ARRAYS
+    // -------------------------------------------------------------
+    const CONSTITUTION_DETAILS = {
+      electorate: {
+        title: "The German Electorate (Universal Suffrage)",
+        text: "The Weimar Constitution gave the vote to all German citizens over 20, making Germany one of the first countries in Europe where women had equal voting rights with men (several years ahead of Britain and France). German citizens directly voted for both the President (every 7 years) and their local representatives in the Reichstag (every 4 years)."
+      },
+      president: {
+        title: "The President (Head of State)",
+        text: "Elected for 7 years, the President had sweeping independent powers. He was Supreme Commander of the armed forces and had the power to appoint or dismiss the Chancellor. Most critically, Article 48 gave the President the power to suspend civil rights and pass emergency laws without the Reichstag."
+      },
+      reichstag: {
+        title: "The Reichstag (Parliament)",
+        text: "The Reichstag made laws and voted on taxes. It used Proportional Representation (PR), meaning seats matched the national percentage of votes. Because no single party ever won over 50% of the vote, parties were forced to form unstable coalition governments that constantly collapsed."
+      },
+      chancellor: {
+        title: "The Chancellor & Cabinet (Head of Government)",
+        text: "The Chancellor was appointed by the President to run the daily affairs of government. However, the Chancellor needed the support of a majority in the Reichstag. If the Reichstag passed a vote of no confidence, the Chancellor and his government had to resign."
+      }
+    };
+
+    const GLOSSARY_TERMS_2 = [
+      {
+        term: "Universal Suffrage",
+        simple: "The right of all adult men and women to vote in elections.",
+        def: "Under the 1919 Weimar Constitution, all Germans over the age of 20 were granted equal voting rights in federal elections."
+      },
+      {
+        term: "Bill of Rights",
+        simple: "A list of fundamental human rights protected by law.",
+        def: "Weimar's constitution guaranteed freedom of speech, assembly, press, religious worship, and equality before the law."
+      },
+      {
+        term: "Proportional Representation",
+        simple: "An election system where a party's seats in parliament match their exact percentage of votes.",
+        def: "If a party won 5% of the national vote, they received exactly 5% of Reichstag seats. This allowed small extremist parties to flourish and made single-party majorities impossible."
+      },
+      {
+        term: "Article 48",
+        simple: "A constitutional emergency clause allowing the President to rule by decree without parliament.",
+        def: "Stated that in an emergency, the President could suspend civil liberties and pass laws directly. Ebert used it 136 times; later presidents used it to bypass democracy."
+      },
+      {
+        term: "Coalition Government",
+        simple: "A government formed by two or more political parties joining together.",
+        def: "Because no party won over 50% of Reichstag seats under PR, parties had to compromise. Weimar had 25 separate coalition governments in 14 years."
+      },
+      {
+        term: "Reparations",
+        simple: "Fines paid by Germany to the Allies to compensate for war damage.",
+        def: "Set in 1921 at £6.6 billion (132 billion gold marks), to be paid in annual cash and raw material instalments."
+      },
+      {
+        term: "Ruhr Occupation",
+        simple: "French and Belgian soldiers invaded Germany's richest industrial valley in January 1923.",
+        def: "French PM Poincaré sent troops to seize coal and steel directly after Germany defaulted on raw material deliveries."
+      },
+      {
+        term: "Passive Resistance",
+        simple: "A peaceful strike where German workers refused to mine coal or cooperate with French invaders.",
+        def: "Ordered by Chancellor Wilhelm Cuno. The government paid workers' wages while receiving no taxes, bankrupting the state."
+      },
+      {
+        term: "Hyperinflation",
+        simple: "Extremely rapid and out-of-control price increases that destroy the value of paper money.",
+        def: "In 1923, prices rose hourly as the government printed trillions of unbacked banknotes to fund passive resistance."
+      },
+      {
+        term: "Mittelstand",
+        simple: "The German middle class (teachers, shopkeepers, clerks, civil servants).",
+        def: "The social group hit hardest by hyperinflation; their lifetime savings and pensions were wiped out overnight, causing lasting bitterness."
+      },
+      {
+        term: "Munich Putsch",
+        simple: "Hitler's failed armed revolt in Munich in November 1923.",
+        def: "Adolf Hitler and General Ludendorff attempted to seize power starting at the Bürgerbräukeller beer hall; crushed by Bavarian police at the Feldherrnhalle."
+      },
+      {
+        term: "Mein Kampf",
+        simple: "Hitler's book ('My Struggle'), written while in prison in 1924.",
+        def: "Dictated to Rudolf Hess at Landsberg Prison, outlining Hitler's racial ideology, antisemitism, and quest for Lebensraum (living space)."
+      }
+    ];
+
+    const EVIDENCE_CARDS_1923 = [
+      {
+        id: "e1",
+        side: "disaster",
+        title: "Middle Class Ruin",
+        simple: "The Mittelstand lost all lifetime savings, insurance policies, and pensions overnight.",
+        detail: "The destruction of middle-class savings permanently alienated Germany’s educated and professional classes from parliamentary democracy."
+      },
+      {
+        id: "e2",
+        side: "overcame",
+        title: "Stresemann's Currency Reform",
+        simple: "Gustav Stresemann introduced the Rentenmark, instantly halting hyperinflation.",
+        detail: "In autumn 1923, Stresemann replaced worthless marks with the Rentenmark (backed by land/industrial mortgages), restoring price stability."
+      },
+      {
+        id: "e3",
+        side: "disaster",
+        title: "French Humiliation",
+        simple: "130 striking workers were killed and 100,000 citizens expelled from their homes.",
+        detail: "The invasion demonstrated Germany's military helplessness under the Versailles treaty and sparked violent nationalist fury."
+      },
+      {
+        id: "e4",
+        side: "overcame",
+        title: "Calling Off Passive Resistance",
+        simple: "Stresemann bravely ended the strike to restart the economy and reopen negotiations.",
+        detail: "Despite intense nationalist hatred, Stresemann halted passive resistance in September 1923, laying the groundwork for the 1924 Dawes Plan."
+      },
+      {
+        id: "e5",
+        side: "disaster",
+        title: "Hitler's Propaganda Triumph",
+        simple: "The Munich trial made Hitler a household name across Germany.",
+        detail: "Sympathetic conservative judges gave Hitler a national pulpit to attack the 'November Criminals' and granted him early parole after only 9 months."
+      },
+      {
+        id: "e6",
+        side: "overcame",
+        title: "Crushing Armed Rebellion",
+        simple: "The Munich police remained loyal and crushed Hitler's armed putsch with gunfire.",
+        detail: "Unlike the Kapp Putsch, Bavarian police fired upon Nazi insurgents at the Feldherrnhalle, proving armed coups against the state could be stopped."
+      },
+      {
+        id: "e7",
+        side: "disaster",
+        title: "Barter Economy & Starvation",
+        simple: "Money was worthless; families survived by trading heirlooms for potatoes and sausages.",
+        detail: "The breakdown of normal trade caused acute malnutrition among pensioners and children, leaving deep scars on public memory."
+      },
+      {
+        id: "e8",
+        side: "overcame",
+        title: "Republic Survived 1923",
+        simple: "Against all odds, the Weimar Republic survived simultaneous invasion, inflation, and coup.",
+        detail: "1923 proved that the democratic center possessed the emergency resolve to navigate total economic collapse and usher in the 'Golden Years' (1924–29)."
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // RUNTIME STATE
+    // -------------------------------------------------------------
+    let isDyslexiaFont = false;
+    let isSpeaking = false;
+    let balanceState = {
+      disasterCount: 0,
+      overcameCount: 0,
+      placedCards: {}
+    };
+
+    // -------------------------------------------------------------
+    // INITIALIZATION
+    // -------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGlossary();
+      renderEvidenceCards();
+      simulateNewElection();
+      updateModelParagraph();
+      lucide.createIcons();
+    });
+
+    // -------------------------------------------------------------
+    // ACCESSIBILITY HANDLERS
+    // -------------------------------------------------------------
+    function toggleDyslexiaFont() {
+      isDyslexiaFont = !isDyslexiaFont;
+      document.body.classList.toggle('dyslexia-font', isDyslexiaFont);
+      const label = document.getElementById('dyslexia-btn-label');
+      if (label) label.textContent = isDyslexiaFont ? 'Dyslexia Font: ON' : 'Dyslexia Font: Off';
+      const btn = document.getElementById('btn-dyslexia');
+      if (btn) {
+        btn.classList.toggle('bg-amber-100', isDyslexiaFont);
+        btn.classList.toggle('border-amber-400', isDyslexiaFont);
+      }
+    }
+
+    function setTextSize(size) {
+      if (size === 'large') {
+        document.body.classList.add('text-lg-mode');
+        document.getElementById('btn-size-large').classList.add('bg-slate-300', 'text-slate-900');
+        document.getElementById('btn-size-normal').classList.remove('bg-slate-200', 'text-slate-900');
+        document.getElementById('btn-size-normal').classList.add('text-slate-600');
+      } else {
+        document.body.classList.remove('text-lg-mode');
+        document.getElementById('btn-size-normal').classList.add('bg-slate-200', 'text-slate-900');
+        document.getElementById('btn-size-large').classList.remove('bg-slate-300', 'text-slate-900');
+        document.getElementById('btn-size-large').classList.add('text-slate-600');
+      }
+    }
+
+    function setLearningMode(mode) {
+      const btnCore = document.getElementById('mode-btn-core');
+      const btnHigher = document.getElementById('mode-btn-higher');
+      if (mode === 'core') {
+        btnCore.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-amber-600 text-white shadow-xs';
+        btnHigher.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-600 hover:text-slate-900';
+      } else {
+        btnHigher.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-amber-600 text-white shadow-xs';
+        btnCore.className = 'px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-600 hover:text-slate-900';
+      }
+    }
+
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      if (isSpeaking) {
+        isSpeaking = false;
+        updateAudioBtn(false);
+        return;
+      }
+      const clean = text.replace(/<[^>]*>/g, '');
+      const u = new SpeechSynthesisUtterance(clean);
+      u.rate = 0.95;
+      u.onstart = () => { isSpeaking = true; updateAudioBtn(true); };
+      u.onend = () => { isSpeaking = false; updateAudioBtn(false); };
+      u.onerror = () => { isSpeaking = false; updateAudioBtn(false); };
+      window.speechSynthesis.speak(u);
+    }
+
+    function updateAudioBtn(active) {
+      const label = document.getElementById('audio-btn-label');
+      const btn = document.getElementById('btn-audio-narrator');
+      if (label && btn) {
+        label.textContent = active ? "Stop Voice" : "Read Aloud";
+        btn.classList.toggle('bg-blue-100', active);
+        btn.classList.toggle('border-blue-400', active);
+      }
+    }
+
+    function toggleAudioReading() {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+        updateAudioBtn(false);
+      } else {
+        readAloudSection('const-summary');
+      }
+    }
+
+    function readAloudSection(id) {
+      const el = document.getElementById(id);
+      if (el) speakText(el.innerText);
+    }
+
+    // -------------------------------------------------------------
+    // NAVIGATION TABS
+    // -------------------------------------------------------------
+    function switchTab(tabId) {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+        updateAudioBtn(false);
+      }
+      document.querySelectorAll('.module-section').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(btn => {
+        btn.className = 'nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap';
+      });
+
+      const activeModule = document.getElementById(`module-${tabId}`);
+      if (activeModule) activeModule.classList.remove('hidden');
+
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activeBtn) {
+        activeBtn.className = 'nav-tab px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-amber-900 bg-amber-50 border border-amber-200 shadow-xs flex items-center gap-1.5 whitespace-nowrap';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 1: CONSTITUTION INTERACTION
+    // -------------------------------------------------------------
+    function inspectConstElement(key) {
+      const d = CONSTITUTION_DETAILS[key];
+      if (!d) return;
+      document.getElementById('const-detail-title').textContent = d.title;
+      document.getElementById('const-detail-text').textContent = d.text;
+    }
+
+    function simulateNewElection() {
+      // Parties: SPD, USPD/KPD, Center (Zentrum), DDP, DVP, DNVP, NSDAP
+      const parties = [
+        { name: "SPD (Socialists)", color: "#dc2626", pct: 38 },
+        { name: "Zentrum (Catholic)", color: "#0284c7", pct: 20 },
+        { name: "DDP (Democrats)", color: "#f59e0b", pct: 18 },
+        { name: "DNVP (Nationalists)", color: "#475569", pct: 10 },
+        { name: "DVP (People's Party)", color: "#64748b", pct: 5 },
+        { name: "USPD / KPD (Communists)", color: "#991b1b", pct: 7 },
+        { name: "Splinter Parties", color: "#94a3b8", pct: 2 }
+      ];
+
+      const barContainer = document.getElementById('election-bar-container');
+      const legend = document.getElementById('election-legend');
+      barContainer.innerHTML = '';
+      legend.innerHTML = '';
+
+      parties.forEach(p => {
+        const seg = document.createElement('div');
+        seg.style.width = `${p.pct}%`;
+        seg.style.backgroundColor = p.color;
+        seg.className = "h-full hover:opacity-90 transition-all cursor-pointer";
+        seg.title = `${p.name}: ${p.pct}% of votes & seats`;
+        barContainer.appendChild(seg);
+
+        const leg = document.createElement('div');
+        leg.className = "flex items-center gap-1.5";
+        leg.innerHTML = `
+          <span class="w-3 h-3 rounded-sm" style="background-color: ${p.color}"></span>
+          <span class="font-medium text-slate-700">${p.name} (${p.pct}%)</span>
+        `;
+        legend.appendChild(leg);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 3: HYPERINFLATION STAGES
+    // -------------------------------------------------------------
+    function selectHyperStage(stage) {
+      ['jan', 'jul', 'nov'].forEach(s => {
+        const b = document.getElementById(`hyper-btn-${s}`);
+        if (s === stage) {
+          b.className = 'cursor-pointer p-5 rounded-2xl bg-amber-50 border-2 border-amber-500 transition-all space-y-1 shadow-xs';
+        } else {
+          b.className = 'cursor-pointer p-5 rounded-2xl bg-slate-50 border-2 border-slate-300 hover:border-amber-400 transition-all space-y-1';
+        }
+      });
+    }
+
+    // -------------------------------------------------------------
+    // MODULE 5: EXAM LAB & BALANCE SCALE
+    // -------------------------------------------------------------
+    function switchExamQuestion(qKey) {
+      document.getElementById('view-exam-10').classList.add('hidden');
+      document.getElementById('view-exam-6').classList.add('hidden');
+      document.getElementById('view-exam-4').classList.add('hidden');
+
+      document.getElementById('btn-q-10').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+      document.getElementById('btn-q-6').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+      document.getElementById('btn-q-4').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700';
+
+      if (qKey === 'q10') {
+        document.getElementById('view-exam-10').classList.remove('hidden');
+        document.getElementById('btn-q-10').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-amber-100 border border-amber-300 text-amber-900 shadow-xs';
+      } else if (qKey === 'q6') {
+        document.getElementById('view-exam-6').classList.remove('hidden');
+        document.getElementById('btn-q-6').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-amber-100 border border-amber-300 text-amber-900 shadow-xs';
+      } else {
+        document.getElementById('view-exam-4').classList.remove('hidden');
+        document.getElementById('btn-q-4').className = 'px-3.5 py-2 text-xs font-bold rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-900 shadow-xs';
+      }
+      lucide.createIcons();
+    }
+
+    function renderEvidenceCards() {
+      const container = document.getElementById('evidence-cards-container');
+      container.innerHTML = '';
+
+      EVIDENCE_CARDS_1923.forEach(card => {
+        const placed = balanceState.placedCards[card.id];
+        const div = document.createElement('div');
+        div.className = `p-4 rounded-xl border text-sm transition-all relative ${
+          placed === 'disaster'
+            ? 'bg-red-50 border-2 border-red-500 shadow-xs'
+            : placed === 'overcame'
+            ? 'bg-sky-50 border-2 border-sky-500 shadow-xs'
+            : 'bg-white border-slate-200 hover:border-slate-300'
+        }`;
+
+        div.innerHTML = `
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-slate-900 font-editorial text-sm sm:text-base">${card.title}</span>
+            <span class="text-[11px] font-mono font-bold uppercase px-2 py-0.5 rounded-full ${
+              card.side === 'disaster' ? 'bg-red-100 text-red-800' : 'bg-sky-100 text-sky-800'
+            }">${card.side === 'disaster' ? 'Disaster' : 'Overcame'}</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">${card.simple}</p>
+          <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+            <button onclick="toggleCardPlacement('${card.id}', 'disaster')" class="flex-1 py-1.5 px-2 rounded-lg text-xs font-mono font-bold transition-colors ${
+              placed === 'disaster' ? 'bg-red-600 text-white' : 'bg-slate-100 text-red-700 hover:bg-red-100'
+            }">+ Disaster</button>
+            <button onclick="toggleCardPlacement('${card.id}', 'overcame')" class="flex-1 py-1.5 px-2 rounded-lg text-xs font-mono font-bold transition-colors ${
+              placed === 'overcame' ? 'bg-sky-600 text-white' : 'bg-slate-100 text-sky-700 hover:bg-sky-100'
+            }">+ Overcame</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function toggleCardPlacement(cardId, side) {
+      if (balanceState.placedCards[cardId] === side) {
+        delete balanceState.placedCards[cardId];
+      } else {
+        balanceState.placedCards[cardId] = side;
+      }
+      recalculateBalance();
+      renderEvidenceCards();
+      updateModelParagraph();
+    }
+
+    function resetScale() {
+      balanceState.placedCards = {};
+      recalculateBalance();
+      renderEvidenceCards();
+      updateModelParagraph();
+    }
+
+    function recalculateBalance() {
+      let disaster = 0;
+      let overcame = 0;
+      Object.values(balanceState.placedCards).forEach(val => {
+        if (val === 'disaster') disaster++;
+        if (val === 'overcame') overcame++;
+      });
+
+      balanceState.disasterCount = disaster;
+      balanceState.overcameCount = overcame;
+
+      document.getElementById('tally-disaster').textContent = disaster;
+      document.getElementById('tally-overcame').textContent = overcame;
+
+      const diff = disaster - overcame;
+      const angle = Math.max(-16, Math.min(16, diff * 4));
+      document.getElementById('scale-beam').style.transform = `rotate(${angle}deg)`;
+    }
+
+    function updateModelParagraph() {
+      const box = document.getElementById('dynamic-model-text');
+      const d = balanceState.disasterCount;
+      const o = balanceState.overcameCount;
+
+      if (d === 0 && o === 0) {
+        box.innerHTML = `<p class="italic text-slate-500">Sort evidence cards onto the balance scale to unlock the Level 5 evaluative conclusion.</p>`;
+        return;
+      }
+
+      let text = "";
+      if (d > o) {
+        text = "In conclusion, 1923 was a catastrophic year that permanently damaged the Weimar Republic. While Gustav Stresemann successfully solved the economic crisis by introducing the Rentenmark, the psychological scar on the middle class was irreversible. Hardworking Germans whose life savings and pensions vanished overnight never forgave the democratic politicians, creating a bitter pool of voters that Adolf Hitler successfully mobilized after the 1929 Wall Street Crash.";
+      } else if (o > d) {
+        text = "In conclusion, it is an exaggeration to claim 1923 was an unmitigated disaster. Although the republic was pushed to the brink by the Ruhr invasion and hyperinflation, its survival demonstrated remarkable structural resilience. Under Stresemann's courageous leadership, the government ended passive resistance, replaced the currency, and defeated Hitler’s armed Munich Putsch, paving the way for the stable and prosperous 'Golden Years' of 1924–1929.";
+      } else {
+        text = "In conclusion, evaluating 1923 requires distinguishing between short-term survival and long-term psychological damage. In the short term, the Weimar Republic survived near-impossible odds: Gustav Stresemann stabilized the economy with the Rentenmark and the police crushed Hitler’s putsch. However, in the long term, the economic destruction of the middle class and the lenient judicial treatment of Hitler sowed the seeds for democracy's ultimate collapse a decade later.";
+      }
+
+      box.innerHTML = `
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-amber-900 font-mono text-xs font-bold uppercase">
+            <span>Examiner Judgment (Level 5):</span>
+            <span class="text-slate-400">·</span>
+            <span>(${d} Disaster vs ${o} Overcame)</span>
+          </div>
+          <p class="leading-relaxed text-slate-800">${text}</p>
+        </div>
+      `;
+    }
+
+    function copyModelAnswer() {
+      const text = document.getElementById('dynamic-model-text').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btnText = document.getElementById('copy-btn-text');
+        btnText.textContent = "Copied!";
+        setTimeout(() => { btnText.textContent = "Copy Paragraph"; }, 2000);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // GLOSSARY MODAL
+    // -------------------------------------------------------------
+    function toggleGlossaryModal() {
+      document.getElementById('modal-glossary').classList.toggle('hidden');
+      lucide.createIcons();
+    }
+
+    function renderGlossary(filter = '') {
+      const container = document.getElementById('glossary-items-container');
+      container.innerHTML = '';
+
+      const items = GLOSSARY_TERMS_2.filter(g => 
+        g.term.toLowerCase().includes(filter.toLowerCase()) || 
+        g.def.toLowerCase().includes(filter.toLowerCase()) ||
+        g.simple.toLowerCase().includes(filter.toLowerCase())
+      );
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5';
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-amber-900 font-editorial text-base">${item.term}</span>
+            <button onclick="speakText('${item.term}. In simple terms: ${item.simple}. Full definition: ${item.def}')" class="text-xs font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              <span>Listen</span>
+            </button>
+          </div>
+          <div class="text-xs font-medium text-amber-950 bg-amber-100/70 p-2 rounded-lg border border-amber-200">
+            <strong>Simple Summary:</strong> ${item.simple}
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${item.def}</p>
+        `;
+        container.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    function filterGlossary() {
+      const q = document.getElementById('glossary-search').value;
+      renderGlossary(q);
+    }
+
+    function lookupGlossary(term) {
+      toggleGlossaryModal();
+      document.getElementById('glossary-search').value = term;
+      renderGlossary(term);
+    }
+  </script>
+</body>
+</html>
